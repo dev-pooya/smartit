@@ -1,0 +1,23 @@
+---
+
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import LogosSection from '../sections/LogosSection.astro';
+import HeroSection from '../sections/HeroSection.astro';
+import ServicesSection from '../sections/ServicesSection.astro';
+import MobileHeader from '@/components/MobileHeader.astro';
+---
+
+
+<Layout title="خانه">
+    <Header />
+    <MobileHeader />
+    <main class="sm:pt-20">
+       <HeroSection />
+        <!-- logoes slidder  -->
+        <LogosSection />
+        <!--  services section -->
+        <ServicesSection />
+
+    </main>
+</Layout>
