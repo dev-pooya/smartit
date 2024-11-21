@@ -1,0 +1,47 @@
+---
+interface Props {
+  header: string;
+  body: string;
+  id: string;
+}
+
+const { header, body, id } = Astro.props;
+---
+
+<div
+  class="relative group border border-base-300 dark:border-[#52525b99] rounded-md"
+  data-element="accordion"
+>
+  <button
+    class="flex items-center transition primary-focus w-full flex-1 justify-between text-left dark:hover:text-sky-400 font-medium gap-2 hover:text-sky-400 p-3 sm:px-4"
+    id={id}
+    aria-controls="Who are the themes for? accordion menu content"
+    aria-expanded="false"
+    type="button"
+    data-element="accordion-btn"
+    >{header}<svg
+      astro-icon="tabler/chevron-down"
+      class="shrink-0 transition-transform h-7 w-7"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      aria-hidden="true"
+      data-element="accordion-chevron"
+      ><path d="M0 0h24v24H0z" stroke="none"></path><path d="m6 9 6 6 6-6"
+      ></path></svg
+    ></button
+  ><div
+    class="duration-300 transition-all ease-in-out max-h-0 overflow-hidden px-3 sm:px-4 hidden"
+    id={id}
+    aria-labelledby="accordion menu button"
+    style="max-height: 0px;"
+    data-element="accordion-content"
+  >
+    <p class="mt-1 max-w-full mb-4 text-white/85 leading-7 transition-[height]">
+      {body}
+    </p>
+  </div>
+</div>

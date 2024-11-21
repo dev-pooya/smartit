@@ -1,8 +1,8 @@
 ---
-import 'aos/dist/aos.css';
-import '../styles/globals.css'
+import "aos/dist/aos.css";
+import "../styles/globals.css";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,21 +10,77 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="fa" dir="rtl" class="dark font-custom">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet"  href="/fonts/font.css" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-background overflow-x-hidden">
-		<slot />
-	</body>
-	  <script>
-      import AOS from "aos";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fonts/font.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-background overflow-x-hidden">
+    <slot />
+  </body>
+  <script>
+    import AOS from "aos";
+    window.addEventListener("load", function () {
       AOS.init();
-    </script>
-</html>
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      function initAccordion() {
+        const a = document.querySelectorAll("[data-element=accordion]");
+        a.forEach((e) => {
+          const s = e.querySelector("[data-element=accordion-btn]"),
+            i = e.querySelector("[data-element=accordion-chevron]"),
+            r = e.querySelector("[data-element=accordion-content]");
 
+          s &&
+            r &&
+            i &&
+            s.addEventListener(
+              "click",
+              (c) => (
+                console.log("event aded"),
+                e.classList.contains("active")
+                  ? (e.classList.remove("active"),
+                    s.setAttribute("aria-expanded", "false"),
+                    (r.style.maxHeight = "0px"),
+                    i.classList.remove("rotate-180"),
+                    setTimeout(() => {
+                      r.classList.add("hidden");
+                    }, 300))
+                  : (e.classList.add("active"),
+                    s.setAttribute("aria-expanded", "true"),
+                    r.classList.remove("hidden"),
+                    (r.style.maxHeight = r.scrollHeight + "px"),
+                    i.classList.add("rotate-180"),
+                    a.forEach((t) => {
+                      t !== e &&
+                        (t.classList.remove("active"),
+                        t
+                          .querySelector("[data-element=accordion-btn]")
+                          ?.setAttribute("aria-expanded", "false"),
+                        t
+                          .querySelector("[data-element=accordion-content]")
+                          ?.setAttribute("style", "max-height: 0px"),
+                        t
+                          .querySelector("[data-element=accordion-chevron]")
+                          ?.classList.remove("rotate-180"),
+                        setTimeout(() => {
+                          t.querySelector(
+                            "[data-element=accordion-content]"
+                          )?.classList.add("hidden");
+                        }, 300));
+                    })),
+                c.preventDefault(),
+                !1
+              )
+            );
+        });
+      }
+      // init
+      initAccordion();
+    });
+  </script>
+</html>

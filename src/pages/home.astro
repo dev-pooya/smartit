@@ -1,26 +1,38 @@
 ---
-
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import LogosSection from '../sections/LogosSection.astro';
-import HeroSection from '../sections/HeroSection.astro';
-import ServicesSection from '../sections/ServicesSection.astro';
-import MobileHeader from '@/components/MobileHeader.astro';
-import DescriptionSection from '@/sections/DescriptionSection.astro';
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import LogosSection from "../sections/LogosSection.astro";
+import HeroSection from "../sections/HeroSection.astro";
+import ServicesSection from "../sections/ServicesSection.astro";
+import MobileHeader from "@/components/MobileHeader.astro";
+import DescriptionSection from "@/sections/DescriptionSection.astro";
+import PricingSection from "@/sections/PricingSection.astro";
+import FandQSection from "@/sections/FandQSection.astro";
+import Testimonials from "@/sections/Testimonials.astro";
+import Footer from "@/sections/Footer.astro";
+import BannerSection from "@/sections/BannerSection.astro";
 ---
 
-
 <Layout title="خانه">
-    <Header />
-    <MobileHeader />
-    <main class="sm:pt-20">
-       <HeroSection />
-        <!-- logoes slidder  -->
-        <LogosSection />
-        <!--  services section -->
-        <ServicesSection />
-        <!-- descriptions section  -->
-         <DescriptionSection />
-
-    </main>
+  <Header />
+  <MobileHeader />
+  <main class="sm:pt-20">
+    <HeroSection />
+    <!-- logoes slidder  -->
+    <LogosSection />
+    <!--  services section -->
+    <ServicesSection />
+    <!-- descriptions section  -->
+    <DescriptionSection />
+    <!-- pricing  section  -->
+    <PricingSection />
+    <!-- testimonials section -->
+    <Testimonials />
+    <!-- F&Q section  -->
+    <FandQSection />
+    <!-- Banner section -->
+    <BannerSection />
+    <!-- Footer section  -->
+    <Footer />
+  </main>
 </Layout>
