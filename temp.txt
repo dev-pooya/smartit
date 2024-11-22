@@ -1,0 +1,77 @@
+<!-- ---
+title: "طراحی و توسعه سایت"
+pricingPlans:
+  - title: "پایه"
+    price: "۱۲ میلیون"
+    attributes:
+      - "طراحی با وردپرس"
+      - "کاملا واکنش گرا"
+      - "هاست و دامنه رایگان"
+      - " ۵ صفحه "
+      - " بخش وبلاگ"
+      - "پشتیبانی رایگان "
+  - title: "حرفه ای"
+    price: "۲۵ میلیون"
+    attributes:
+      - " طراحی اختصاصی با وردپرس "
+      - "هاست و دامنه رایگان"
+      - "بهینه سازی صفحات"
+      - " بخش وبلاگ"
+      - "گالری محصولات"
+      - "۸ صفحه"
+      - "پشتیبانی رایگان "
+  - title: " تجاری"
+    price: "۴۷ میلیون"
+    attributes:
+      - " برنامه نویسی اختصاصی  "
+      - "کدنویسی بهینه برای سئو"
+      - "هاست و دامنه رایگان"
+      - "بهینه سازی صفحات"
+      - " بخش وبلاگ"
+      - "گالری محصولات"
+      - "گالری نمونه کارها"
+---
+
+### Why Choose Our Web Design Service?
+
+We create beautiful and responsive websites tailored to your needs.
+
+![Web Design](https://via.placeholder.com/800x400)
+
+#### Features of Our Service:
+
+- Custom designs that align with your brand.
+- User-friendly and accessible layouts.
+- Full SEO support for better rankings. -->
+
+
+
+---
+title: "Web Design"
+pricingPlans:
+  - title: "Basic Plan"
+    price: "$500"
+    attributes:
+      - "Up to 5 pages"
+      - "Responsive Design"
+      - "SEO Optimization"
+  - title: "Premium Plan"
+    price: "$1200"
+    attributes:
+      - "Up to 15 pages"
+      - "Custom Animations"
+      - "Advanced SEO"
+---
+
+### Why Choose Our Web Design Service?
+
+We create beautiful and responsive websites tailored to your needs.
+
+![Web Design](https://via.placeholder.com/800x400)
+
+#### Features of Our Service:
+
+- Custom designs that align with your brand.
+- User-friendly and accessible layouts.
+- Full SEO support for better rankings.
+<h2 class='text-sky-400' style='color:red;'> this is a blue text</h2>

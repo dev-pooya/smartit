@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+
+const services = await getCollection("services");
+---
+
+<html>
+  <head>
+    <title>Our Services</title>
+  </head>
+  <body class="p-8">
+    <h1 class="text-4xl font-bold">Our Services</h1>
+    <ul class="mt-6 space-y-4">
+      {
+        services.map(({ slug, data }) => (
+          <li>
+            <a href={`/services/${slug}`} class="text-blue-600 hover:underline">
+              {data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </body>
+</html>

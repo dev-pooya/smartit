@@ -7,13 +7,13 @@ function TestimonialsCard({ sublist, index }) {
     >
       {sublist.map(({ title, subtitle, comment }) => (
         <div
-          class="dark:border-[#52525b99] border-base-300 border bg-base-200/50 dark:bg-[#27272a80] p-4 rounded-2xl"
+          className="dark:border-[#52525b99] border-base-300 border bg-base-200/50 dark:bg-[#27272a80] p-4 rounded-2xl"
           data-aos="fade-up"
           data-aos-delay="0.2"
         >
-          <div class="w-full mx-auto">
-            <div class="flex items-center gap-6 mr-auto">
-              <div class="shrink-0 h-12 overflow-hidden rounded-full w-12">
+          <div className="w-full mx-auto">
+            <div className="flex items-center gap-6 mr-auto">
+              <div className="shrink-0 h-12 overflow-hidden rounded-full w-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
@@ -28,11 +28,11 @@ function TestimonialsCard({ sublist, index }) {
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-medium"> {title} </h3>
-                <p class="opacity-90 dark:opacity-80 text-sm">{subtitle}</p>
+                <h3 className="text-lg font-medium"> {title} </h3>
+                <p className="opacity-90 dark:opacity-80 text-sm">{subtitle}</p>
               </div>
             </div>
-            <p class="text-sm lg:text-base mt-4">{comment}</p>
+            <p className="text-sm lg:text-base mt-4">{comment}</p>
           </div>
         </div>
       ))}
