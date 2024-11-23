@@ -1,6 +1,9 @@
 ---
+import Accordion from "@/components/Accordion.astro";
 import Header from "@/components/Header.astro";
 import MobileHeader from "@/components/MobileHeader.astro";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection, getEntry } from "astro:content";
 
@@ -25,7 +28,7 @@ if (!service) {
 // Render the Markdown content and headings
 const { Content } = await service.render();
 
-const { title, pricingPlans } = service.data;
+const { title, pricingPlans, faqs } = service.data;
 ---
 
 <Layout title={title}>
@@ -37,7 +40,65 @@ const { title, pricingPlans } = service.data;
         {title}
       </h1>
       <Content />
-      <section class="py-10"></section>
+      <section class="py-10">
+        <h2 class="text-2xl md:text-4xl text-center font-semibold mt-16">
+          پلن‌های طراحی وب سایت
+        </h2>
+        <p class="text-sky-400 text-center pt-3">
+          با دریافت مشاوره از کارشناسان حرفه‌ای ما، طرح مناسب کسب و کارتان را
+          انتخاب کنید
+        </p>
+        <div class="grid md:grid-cols-3 gap-10 pt-10">
+          {
+            pricingPlans.map((plan, index) => (
+              <Card className="p-5 rounded-xl flex flex-col">
+                <div class="pt-3">
+                  <h3 class="text-2xl font-semibold">{plan.title}</h3>
+                  <p class="font-semibold mt-3" />
+                  <div class="">
+                    <span class="font-semibold text-4xl dark:text-sky-400 text-primary-600">
+                      {plan.price}
+                    </span>
+                    <span class="text-xl">/شروع قیمت</span>
+                    <br />
+                  </div>
+                </div>
+                <ul class="py-6">
+                  {plan.attributes.map((att) => (
+                    <li>
+                      <span class="text-2xl pe-1 text-sky-400">&#10003;</span>
+                      {att}
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  className="w-full mt-auto"
+                  variant={index !== 1 ? "secondary" : "default"}
+                >
+                  سفارش
+                </Button>
+              </Card>
+            ))
+          }
+        </div>
+        <section class="mt-32">
+          <h2 class="text-2xl md:text-4xl text-center font-semibold mt-16">
+            سوالات متداول
+          </h2>
+          <p class="text-sky-400 text-center pt-3">
+            پاسخ سوالات خود را با درخواست مشاوره از کارشناسان ما دریافت کنید
+          </p>
+          <div class="flex flex-col mx-auto gap-3 max-w-3xl mt-10">
+            {
+              faqs.map((faq) => (
+                <div>
+                  <Accordion header={faq.question} body={faq.answer} />
+                </div>
+              ))
+            }
+          </div>
+        </section>
+      </section>
     </div>
   </main>
 </Layout>

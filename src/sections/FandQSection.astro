@@ -9,7 +9,7 @@ import { fandQes } from "@/content/FandQes";
     <div class="flex flex-col mx-auto gap-3 max-w-3xl mt-10">
       {
         fandQes.map((elm) => (
-          <Accordion header={elm.question} body={elm.answer} id={elm.id} />
+          <Accordion header={elm.question} body={elm.answer} />
         ))
       }
     </div>

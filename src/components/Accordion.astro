@@ -2,10 +2,9 @@
 interface Props {
   header: string;
   body: string;
-  id: string;
 }
 
-const { header, body, id } = Astro.props;
+const { header, body } = Astro.props;
 ---
 
 <div
@@ -14,7 +13,6 @@ const { header, body, id } = Astro.props;
 >
   <button
     class="flex items-center transition primary-focus w-full flex-1 justify-between text-right dark:hover:text-sky-400 font-medium gap-2 hover:text-sky-400 p-3 sm:px-4"
-    id={id}
     aria-controls="Who are the themes for? accordion menu content"
     aria-expanded="false"
     type="button"
@@ -35,7 +33,6 @@ const { header, body, id } = Astro.props;
     ></button
   ><div
     class="duration-300 transition-all ease-in-out max-h-0 overflow-hidden px-3 sm:px-4 hidden"
-    id={id}
     aria-labelledby="accordion menu button"
     style="max-height: 0px;"
     data-element="accordion-content"
