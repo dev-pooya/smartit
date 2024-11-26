@@ -4,69 +4,129 @@ import { Button } from "./ui/button";
 ---
 
 <header class="relative sm:hidden">
-    <div class="max-w-screen-xl flex justify-between items-center px-6 py-4">
-        <Button  data-element='open-slider-btn' size="icon" variant='outline'>
-            <Icon name='mdi:menu' />
-        </Button>
-        
-        <nav class="fixed top-0 bottom-0 right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"  data-element="canvas-slider">
-            <Button className="mr-auto"  data-element='close-slider-btn' size="icon">
-            <Icon name='mdi:close' size={25}/>
-            </Button>
-        <ul class="mt-5">
-            
-            <li class="py-3 text-lg font-medium text-white flex gap-2 items-center "><Icon name='mdi:home'  size={22}/> <a href="/">خانه</a></li>
-            <li class="py-3 text-lg font-medium text-white "><a class="flex gap-2 items-center" data-element="collapse-trigger" role="button"><Icon name='mdi:hand-tap'  size={22}/><span>خدمات</span><Icon name='mdi:chevron-left' size={22} class="mr-auto duration-200 -rotate-90"  data-element="trigger-icon"/></a>
-            <ul class="pr-3 pt-4 overflow-hidden" >
-                <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">طراحی سایت</a>
-                </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">سئو</a>
-                </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">اینستاگرام</a>
-                </li>
-                </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">تولید محتوای ویدیویی</a>
-                </li>
-               </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">طراحی UI</a>
-                </li>
-                </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">برنامه نویسی </a>
-                </li>
-                </li>  <li class="py-2 pr-3 text-lg  text-white/80 border-r-2 border-white/40 ">
-                    <a href="/">تبلیغات گوگل  </a>
-                </li>
-            </ul>
+  <div class="max-w-screen-xl flex justify-between items-center px-6 py-4">
+    <Button data-element="open-slider-btn" size="icon" variant="outline">
+      <Icon name="mdi:menu" />
+    </Button>
+
+    <nav
+      class="fixed top-0 bottom-0 right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"
+      data-element="canvas-slider"
+    >
+      <Button className="mr-auto" data-element="close-slider-btn" size="icon">
+        <Icon name="mdi:close" size={25} />
+      </Button>
+      <ul class="mt-5">
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:home" size={22} />
+          <a href="/">خانه</a>
+        </li>
+        <li class="py-3 text-lg font-medium text-white">
+          <a
+            class="flex gap-2 items-center"
+            data-element="collapse-trigger"
+            role="button"
+            ><Icon name="mdi:hand-tap" size={22} /><span>خدمات</span><Icon
+              name="mdi:chevron-left"
+              size={22}
+              class="mr-auto duration-200 -rotate-90"
+              data-element="trigger-icon"
+            /></a
+          >
+          <ul class="pr-3 pt-4 overflow-hidden">
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">طراحی سایت</a>
             </li>
-            <li class="py-3  text-lg font-medium text-white flex gap-2 items-center"><Icon name='mdi:bag-checked'  size={22}/><a href="/">نمونه کارها</a></li>
-            <li class="py-3  text-lg font-medium text-white flex gap-2 items-center"><Icon name='mdi:file-document-multiple'  size={22}/><a href="/">مقالات</a></li>
-            <li class="py-3  text-lg font-medium text-white flex gap-2 items-center"><Icon name='mdi:dollar'  size={22}/><a href="/">تعرفه ها </a></li>
-            <li class="py-3  text-lg font-medium text-white flex gap-2 items-center"><Icon name='mdi:about-variant'  size={22}/><a href="/"> درباره ما  </a></li>
-            <li class="py-3  text-lg font-medium text-white flex gap-2 items-center"><Icon name='mdi:support'  size={22}/><a href="/"> تماس  </a></li>
-        </ul>
-        </nav>
-        <div class="flex gap-2 items-end">
-            <h2 class="text-white text-md font-[dune-rise]">
-            smart IT
-        </h2>
-        <img src="/public/images/logo.svg" alt="logo smart it" width="35">
-        
-        </div>
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">سئو</a>
+            </li>
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">اینستاگرام</a>
+            </li>
+
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">تولید محتوای ویدیویی</a>
+            </li>
+
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">طراحی UI</a>
+            </li>
+
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">برنامه نویسی </a>
+            </li>
+
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/">تبلیغات گوگل </a>
+            </li>
+          </ul>
+        </li>
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:bag-checked" size={22} /><a href="/">نمونه کارها</a>
+        </li>
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:file-document-multiple" size={22} /><a href="/"
+            >مقالات</a
+          >
+        </li>
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:dollar" size={22} /><a href="/">تعرفه ها </a>
+        </li>
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:about-variant" size={22} /><a href="/"> درباره ما </a>
+        </li>
+        <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
+          <Icon name="mdi:support" size={22} /><a href="/"> تماس </a>
+        </li>
+      </ul>
+
+      <script>
+        document
+          .querySelector("[data-element=open-slider-btn]")
+          .addEventListener("click", () =>
+            document
+              .querySelector("[data-element=canvas-slider]")
+              .classList.remove("translate-x-full")
+          );
+        document
+          .querySelector("[data-element=close-slider-btn]")
+          .addEventListener("click", () =>
+            document
+              .querySelector("[data-element=canvas-slider]")
+              .classList.add("translate-x-full")
+          );
+
+        // collapse menu
+        document
+          .querySelectorAll("[data-element=collapse-trigger]")
+          ?.forEach((element) => {
+            element.addEventListener("click", (e) => {
+              element.nextElementSibling.classList.toggle("max-h-0");
+              element.nextElementSibling.classList.toggle("pt-4");
+              element
+                .querySelector("[data-element=trigger-icon]")
+                .classList.toggle("-rotate-90");
+            });
+          });
+      </script>
+    </nav>
+    <div class="flex gap-2 items-end">
+      <h2 class="text-white text-md font-[dune-rise]">smart IT</h2>
+      <img src="/images/logo.svg" alt="logo smart it" width="35" />
     </div>
+  </div>
 </header>
-
-<script>
-document.querySelector('[data-element=open-slider-btn]').addEventListener('click', ()=> document.querySelector('[data-element=canvas-slider]').classList.remove('translate-x-full'))
-document.querySelector('[data-element=close-slider-btn]').addEventListener('click', ()=> document.querySelector('[data-element=canvas-slider]').classList.add('translate-x-full'))
-
-// collapse menu
-document.querySelectorAll('[data-element=collapse-trigger]')?.forEach(element => {
-    element.addEventListener('click', e => {
-        element.nextElementSibling.classList.toggle('max-h-0')
-        element.nextElementSibling.classList.toggle('pt-4')
-        element.querySelector('[data-element=trigger-icon]').classList.toggle('-rotate-90')
-        
-    })
-});
-</script>

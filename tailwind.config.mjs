@@ -87,6 +87,19 @@ export default {
           },
         },
       },
+      animation: {
+        portfolioSlideUp: "5s slideUp both infinite alternate linear",
+      },
+      keyframes: {
+        slideUp: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(calc(-100% + 750px))",
+          },
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

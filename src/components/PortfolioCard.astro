@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { portfolio } = Astro.props;
+---
+
+<div class="overflow-hidden border-4 rounded-xl h-[750px] relative">
+  <div class={`hover:animate-portfolioSlideUp `}>
+    <img src={portfolio.image} alt="" />
+  </div>
+
+  <div
+    class="absolute right-3 left-3 bottom-3 rounded-xl flex flex-col p-3 backdrop-blur-sm bg-gray-400/30 text-black"
+  >
+    <h1 class="font-medium text-lg">{portfolio.title}</h1>
+    <div class="flex justify-between">
+      <a href={portfolio.domain}>{portfolio.domain.slice(8)}</a>
+      <ul class="flex gap-3 justify-end">
+        {
+          portfolio.techStack.map((tech) => (
+            <li>
+              <Icon name={tech} size={25} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

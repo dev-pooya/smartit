@@ -23,6 +23,16 @@ const servicesCollection = defineCollection({
   }),
 });
 
+const portfoliosCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    domain: z.string(),
+    image: z.string(),
+    techStack: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   services: servicesCollection,
+  portfolios: portfoliosCollection,
 };
