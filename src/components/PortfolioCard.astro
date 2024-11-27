@@ -5,7 +5,7 @@ const { portfolio } = Astro.props;
 ---
 
 <div class="overflow-hidden border-4 rounded-xl h-[750px] relative">
-  <div class={`hover:animate-portfolioSlideUp `}>
+  <div class={`animate-portfolioSlideUp `} data-element="portfolio-card">
     <img src={portfolio.image} alt="" />
   </div>
 

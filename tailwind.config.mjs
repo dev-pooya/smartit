@@ -2,7 +2,7 @@
 export default {
   darkMode: ["class"],
   content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,md}",
     "./pages/**/*.{astro,js,jsx,ts,tsx}",
   ],
   theme: {
@@ -76,7 +76,10 @@ export default {
       },
       animation: {
         slide: "35s slide infinite linear ",
+        portfolioSlideUp:
+          "slideUp var(--animation-portfolio, 50s) both infinite alternate linear",
       },
+
       keyframes: {
         slide: {
           "0%": {
@@ -86,11 +89,6 @@ export default {
             transform: "translate(calc(100% - 8rem))",
           },
         },
-      },
-      animation: {
-        portfolioSlideUp: "5s slideUp both infinite alternate linear",
-      },
-      keyframes: {
         slideUp: {
           "0%": {
             transform: "translateY(0)",

@@ -27,4 +27,16 @@ const portfolios = await getCollection("portfolios");
       </section>
     </div>
   </main>
+  <script>
+    const cards = document.querySelectorAll("[data-element=portfolio-card]");
+
+    cards.forEach((card) => {
+      const computedStyles = getComputedStyle(card);
+      const height = parseInt(computedStyles.height) - 750; // Get the height of the card
+      height > 0 ? height : -1 * height;
+      const duration = height / 50; // Calculate duration based on height
+      console.log(duration);
+      card.style.setProperty("--animation-portfolio", `${duration}s`); // Set the duration dynamically
+    });
+  </script>
 </Layout>
