@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@/components/Header.astro";
+import MobileHeader from "@/components/MobileHeader.astro";
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+const blogs = await getCollection("blogs");
+---
+
+<Layout title="وبلاگ">
+  <Header />
+  <MobileHeader />
+  <main class="sm:pt-20">
+    <div class="max-w-screen-xl mx-auto py-10 px-5">
+      <h1 class="colored-title text-5xl font-medium text-center py-10">
+        وبلاگ
+      </h1>
+      <section class="">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+          {
+            blogs.map(({ slug, data }) => (
+              <Card className="p-2 md:p-3 rounded-2xl pb-4 overflow-hidden">
+                <img
+                  src={data.thumbnail}
+                  class="rounded-xl"
+                  data-aos="zoom-in"
+                />
+                <a href={`/blog/${slug}`}>
+                  {" "}
+                  <h2
+                    class="text-lg md:text-xl font-semibold py-5"
+                    data-aos="fade-left"
+                  >
+                    {data.title}
+                  </h2>
+                </a>
+
+                <ul class="flex gap-2">
+                  {data.tags.map((tag) => (
+                    <li>
+                      <Badge variant="secondary">{tag}</Badge>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

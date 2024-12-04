@@ -32,7 +32,38 @@ const portfoliosCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    thumbnail: z.string(),
+    tags: z.array(z.string()),
+    headings: z.array(
+      z.object({
+        title: z.string(),
+        id: z.string(),
+        subHeadings: z
+          .array(
+            z.object({
+              title: z.string(),
+              id: z.string(),
+              subHeadings: z
+                .array(
+                  z.object({
+                    title: z.string(),
+                    id: z.string(),
+                  })
+                )
+                .optional(),
+            })
+          )
+          .optional(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   services: servicesCollection,
   portfolios: portfoliosCollection,
+  blogs: blogCollection,
 };

@@ -5,6 +5,7 @@ import MobileHeader from "@/components/MobileHeader.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
 import { getCollection, getEntry } from "astro:content";
 
 // Fetch the paths for all services
@@ -101,37 +102,5 @@ const { title, pricingPlans, faqs } = service.data;
       </section>
     </div>
   </main>
+  <Footer />
 </Layout>
-<!-- <html>
-  <head>
-    <title>{title} - Our Services</title>
-    <meta charset="UTF-8" />
-  </head>
-  <body class="p-8">
-    <h1 class="text-4xl font-bold">{title}</h1>
-
-    {
-      pricingPlans && (
-        <section class="mt-8">
-          <h2 class="text-2xl font-semibold">Pricing Plans</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-            {pricingPlans.map((plan) => (
-              <div class="p-4 border rounded-lg shadow-lg">
-                <h3 class="text-lg font-bold">{plan.name}</h3>
-                <p class="text-xl font-semibold mt-2">{plan.price}</p>
-                <ul class="list-disc list-inside mt-2">
-                  {plan.attributes.map((attr) => (
-                    <li>{attr}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-      )
-    }
-    <section class="mt-6">
-      
-<div><Content /></div>
-
--->
