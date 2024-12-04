@@ -1,21 +1,78 @@
+---
+import { Icon } from "astro-icon/components";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
 <header
-  class="border-b-2 hidden sm:block border-white/10 backdrop-blur-sm bg-slate-900/40 fixed top-0 w-full z-50"
+  class="border-b-2 hidden sm:block border-white/10 bg-slate-900/80 fixed top-0 w-full z-40"
 >
-  <div class="flex justify-between items-center max-w-screen-xl mx-auto py-3">
-    <ul class="flex gap-3">
-      <li class="py-1 pl-4 text-lg text-white"><a href="/">خانه</a></li>
-      <li class="py-1 px-4 text-lg text-white">
-        <a href="/services/web-design">خدمات</a>
+  <div class="flex justify-between items-center max-w-screen-xl mx-auto">
+    <ul class="flex gap-4 font-medium relative">
+      <li
+        class={`py-4 pl-4 flex items-center gap-1 ${currentPath === "" ? "opacity-100 text-sky-400" : ""}`}
+      >
+        <a href="/" class="mt-1">خانه</a>
       </li>
-      <li class="py-1 px-4 text-lg text-white">
-        <a href="/portfolios">نمونه کارها</a>
+      <li
+        class={`py-1 pl-4 flex items-center gap-1 mega-menu-trigger ${currentPath.includes("services") ? "opacity-100 text-sky-400" : ""}`}
+      >
+        <a href="#" class="mt-1">خدمات</a>
+        <Icon name="mdi:arrow-down-drop" size={24} />
+        <div
+          class="mega-menu absolute z-50 top-full right-0 w-full p-4 backdrop-blur-md bg-gray-900/60 hidden grid-cols-2 gap-10 rounded-b-xl"
+        >
+          <ul>
+            <h3 class="text-lg font-medium border-b border-white/20 mb-3 pb-1">
+              طراحی و توسعه سایت
+            </h3>
+            <li class="py-1 flex items-center gap-1 text-sm">
+              <a href="/services/web-design"> طراحی سایت شرکتی</a>
+            </li>
+            <li class="py-1 flex items-center gap-1 text-sm">
+              <a href="/"> طراحی سایت فروشگاهی</a>
+            </li>
+            <li class="py-1 flex items-center gap-1 text-sm">
+              <a href="/"> برنامه نویسی و توسعه سایت اختصاصی</a>
+            </li>
+          </ul>
+          <ul>
+            <h3 class="text-lg font-medium border-b border-white/20 mb-3 pb-1">
+              بازاریابی محتوایی
+            </h3>
+            <li class="py-1 text-sm">
+              <a href="/">اینستاگرام </a>
+            </li>
+            <li class="py-1 text-sm">
+              <a href="/">سئو </a>
+            </li><li class="py-1 text-sm">
+              <a href="/">تولید محتوای ویدیویی </a>
+            </li>
+            <li class="py-1 text-sm">
+              <a href="/">طراحی UI </a>
+            </li>
+          </ul>
+        </div>
       </li>
-      <li class="py-1 px-4 text-lg text-white"><a href="/blog">وبلاگ</a></li>
-      <li class="py-1 px-4 text-lg text-white"><a href="/contact">تماس </a></li>
+      <li
+        class={`py-1 pl-4 flex items-center gap-1 ${currentPath === "portfolios" ? "opacity-100 text-sky-400" : ""}`}
+      >
+        <a href="/portfolios" class="mt-1">نمونه کارها</a>
+      </li>
+      <li
+        class={`py-1 pl-4 flex items-center gap-1 ${currentPath === "blog" ? "opacity-100 text-sky-400" : ""}`}
+      >
+        <a href="/blog" class="mt-1">وبلاگ</a>
+      </li>
+      <li
+        class={`py-1 pl-4 flex items-center gap-1 ${currentPath === "contact" ? "opacity-100 text-sky-400" : ""}`}
+      >
+        <a href="/contact" class="mt-1">تماس با ما </a>
+      </li>
     </ul>
-    <div class="logo flex gap-4 items-end">
-      <h2 class="text-white text-2xl uppercase font-[dune-rise]">smart it</h2>
-      <img src="/images/logo.svg" alt="logo_creativepen" width="50" />
+    <div class="logo flex gap-2 items-end">
+      <h2 class="text-lg uppercase font-bold font-[dune-rise]">smart it</h2>
+      <img src="/images/logo.svg" alt="logo_creativepen" width="40" />
     </div>
   </div>
 </header>

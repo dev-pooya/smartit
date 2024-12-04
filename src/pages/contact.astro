@@ -40,17 +40,17 @@ import { Icon } from "astro-icon/components";
           </p>
         </div>
         <div>
-          <form action="" class="px-5 flex flex-col gap-5">
+          <form action="" class="px-5 md:px-0 flex flex-col gap-5">
             <div class="flex gap-3">
               <Input placeholder="نام و نام خانوادگی" />
               <Input placeholder="091 XXXX XXXX" type="tel" />
             </div>
-            <Textarea placeholder="پیام خود را بنویسید" />
+            <Textarea placeholder="پیام خود را بنویسید" rows={7} />
             <Button className="w-full"> ارسال </Button>
           </form>
         </div>
       </div>
-      <div class="grid md:grid-cols-3 gap-10 md:py-20 p-5">
+      <div class="grid md:grid-cols-3 gap-10 md:pt-32 p-5 md:p-0">
         <Card className="p-5 flex flex-col items-center">
           <Icon name="mdi:location-radius" size={50} />
           <p class="font-light py-5">

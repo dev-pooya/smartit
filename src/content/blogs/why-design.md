@@ -40,11 +40,11 @@ headings:
 
 </p>
 
-<h2 class='text-2xl font-medium py-4' id='101'>
+<h2 class='text-2xl font-medium py-4 scroll-mt-32' id='101'>
  طراحی وب و نقش آن در جذب مشتریان
 </h2>
 
-<h3 class='text-xl font-medium' id='201'>
+<h3 class='text-xl font-medium scroll-mt-32' id='201'>
 ظاهر جذاب و کاربرپسند:
 </h3>
 <p class='text-white/80 pb-4 pt-1'>

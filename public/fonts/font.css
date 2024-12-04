@@ -3,6 +3,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 100;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_thin.woff"),
     url("./yekanBahk/yekan_bakh_thin.woff2");
 }
@@ -10,6 +11,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_light.woff"),
     url("./yekanBahk/yekan_bakh_light.woff2");
 }
@@ -17,6 +19,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_regular.woff"),
     url("./yekanBahk/yekan_bakh_regular.woff2");
 }
@@ -24,6 +27,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_medium.woff"),
     url("./yekanBahk/yekan_bakh_medium.woff2");
 }
@@ -31,6 +35,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_bold.woff"),
     url("./yekanBahk/yekan_bakh_bold.woff2");
 }
@@ -38,6 +43,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_heavy.woff"),
     url("./yekanBahk/yekan_bakh_heavy.woff2");
 }
@@ -46,6 +52,7 @@
   font-family: "yekanBakh";
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: url("./yekanBahk/yekan_bakh_fat.woff"),
     url("./yekanBahk/yekan_bakh_heavy.woff2");
 }
@@ -53,5 +60,6 @@
 @font-face {
   font-family: "dune-rise";
   font-style: normal;
+  font-display: swap;
   src: url("./Dune_Rise.otf"), url("./Dune_Rise.ttf");
 }

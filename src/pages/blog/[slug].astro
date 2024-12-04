@@ -53,12 +53,12 @@ const { title, thumbnail, tags, headings } = blog.data;
           <ul class="flex flex-col gap-3">
             {
               headings.map((heading) => (
-                <li class="font-medium  py-3">
+                <li class="font-medium  py-3 ">
                   <a href={`#${heading.id}`}> {heading.title}</a>
                   {heading.subHeadings && (
                     <ul class="">
                       {heading.subHeadings.map((sub) => (
-                        <li class="pr-4 text-sm py-1">
+                        <li class="pr-4 text-sm py-1 ">
                           <a href={`#${sub.id}`}>- {sub.title}</a>
                         </li>
                       ))}
