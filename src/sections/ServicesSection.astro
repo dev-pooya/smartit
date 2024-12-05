@@ -1,16 +1,15 @@
 ---
+import SectionTitle from "@/components/SectionTitle.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<section>
+<section class="mt-16">
   <div class="max-w-screen-lg mx-auto py-16">
-    <h1 class="text-center text-5xl font-semibold">
-      خدمات <span class="text-sky-400 px-3">ما</span>
-    </h1>
-    <p class="text-center py-3">
-      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-      طراحان گرافیک است
-    </p>
+    <SectionTitle
+      title="خدمات ما"
+      subtitle="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است"
+      effectiveTitle="our services"
+    />
 
     <div
       class="grid gap-4 grid-cols-2 md:grid-cols-3 sm:grid-cols-2 sm:py-12 px-6 sm:px-0"

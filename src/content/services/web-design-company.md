@@ -1,5 +1,7 @@
 ---
-title: "طراحی و توسعه سایت"
+title: " طراحی و توسعه سایت شرکتی"
+subtitle: ""
+effectiveTitle: "web designing"
 pricingPlans:
   - title: "پایه"
     price: "۱۲ میلیون"

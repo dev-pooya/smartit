@@ -2,6 +2,7 @@
 import Accordion from "@/components/Accordion.astro";
 import Header from "@/components/Header.astro";
 import MobileHeader from "@/components/MobileHeader.astro";
+import SectionTitle from "@/components/SectionTitle.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/layouts/Layout.astro";
@@ -29,7 +30,7 @@ if (!service) {
 // Render the Markdown content and headings
 const { Content } = await service.render();
 
-const { title, pricingPlans, faqs } = service.data;
+const { title, pricingPlans, faqs, subtitle, effectiveTitle } = service.data;
 ---
 
 <Layout title={title}>
@@ -37,14 +38,17 @@ const { title, pricingPlans, faqs } = service.data;
   <MobileHeader />
   <main class="sm:pt-20">
     <div class="max-w-screen-xl mx-auto py-10">
-      <h1 class="colored-title text-5xl font-medium text-center py-10">
-        {title}
-      </h1>
+      <SectionTitle
+        title={title}
+        subtitle={subtitle}
+        effectiveTitle={effectiveTitle}
+      />
       <Content />
-      <section class="py-10">
-        <h2 class="text-2xl md:text-4xl text-center font-semibold mt-16">
-          پلن‌های طراحی وب سایت
-        </h2>
+      <section class="py-10 mt-32">
+        <SectionTitle
+          title={`پلن های ${title}`}
+          effectiveTitle={effectiveTitle}
+        />
         <p class="text-sky-400 text-center pt-3">
           با دریافت مشاوره از کارشناسان حرفه‌ای ما، طرح مناسب کسب و کارتان را
           انتخاب کنید

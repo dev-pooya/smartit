@@ -1,0 +1,50 @@
+---
+interface Props {
+  text: string;
+  className: string;
+}
+const { text, className } = Astro.props;
+---
+
+<svg class={"animated-text " + className}>
+  <text x="50%" y="50%" dy=".35em" text-anchor="middle"> {text} </text>
+</svg>
+
+<style>
+  .animated-text {
+    width: 100%;
+  }
+  .animated-text text {
+    animation: stroke 4s 3s infinite alternate;
+    stroke-width: 2;
+    stroke: #38bdf8;
+    word-spacing: 0.8em;
+    letter-spacing: 0.3em;
+    font-weight: 800;
+  }
+  @keyframes stroke {
+    0% {
+      fill: rgba(204, 0, 0, 0);
+      stroke: #38bdf8;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+    }
+    70% {
+      fill: rgba(204, 0, 0, 0);
+      stroke: #38bdf8;
+    }
+    80% {
+      fill: rgba(204, 0, 0, 0);
+      stroke: #38bdf8;
+      stroke-width: 3;
+    }
+    100% {
+      fill: rgb(5, 0, 29);
+      stroke: rgba(0, 160, 11, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+    }
+  }
+</style>

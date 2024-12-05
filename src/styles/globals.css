@@ -199,3 +199,11 @@ html {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #d6e1fe var(--tw-gradient-to-position);
 }
+
+.section-title-effect {
+  background-image: linear-gradient(90deg, #38bdf8, #38bdf820, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.1;
+}

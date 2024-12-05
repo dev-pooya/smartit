@@ -1,14 +1,15 @@
 ---
+import SectionTitle from "@/components/SectionTitle.astro";
 import { Button } from "@/components/ui/button";
 ---
 
 <section class="md:my-36 my-24 overflow-hidden" id="pricing">
   <div class="relative max-w-7xl mx-auto px-4">
-    <div class="flex justify-center">
-      <p class="inline colored-title font-medium">تعرفه ها</p>
-    </div><h2 class="text-3xl md:text-5xl font-semibold my-8 text-center">
-      مناسب برای تمامی بیزینس ها
-    </h2>
+    <SectionTitle
+      title="تعرفه ها"
+      subtitle="مناسب برای تمامی کسب و کارها"
+      effectiveTitle="pricing"
+    />
 
     <div class="w-full mx-auto grid grid-cols-3 lg:grid-cols-4 mt-12">
       <div class="grid md:grid-cols-3 col-span-3 gap-3 lg:col-start-2 lg:gap-0">
