@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 ---
 
 <header class="relative sm:hidden">
-  <div class="max-w-screen-xl flex justify-between items-center px-6 py-4">
+  <div class="max-w-screen-xl flex justify-between items-center px-6 py-2">
     <Button data-element="open-slider-btn" size="icon" variant="outline">
       <Icon name="mdi:menu" />
     </Button>
@@ -37,60 +37,64 @@ import { Button } from "./ui/button";
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">طراحی سایت</a>
+              <a href="/services/web-design-company">طراحی سایت</a>
             </li>
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">سئو</a>
+              <a href="/services/seo">سئو</a>
             </li>
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">اینستاگرام</a>
-            </li>
-
-            <li
-              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
-            >
-              <a href="/">تولید محتوای ویدیویی</a>
+              <a href="/services/instagram">اینستاگرام</a>
             </li>
 
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">طراحی UI</a>
+              <a href="/services/video-content">تولید محتوای ویدیویی</a>
             </li>
 
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">برنامه نویسی </a>
+              <a href="/services/ui-design">طراحی UI</a>
             </li>
 
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
-              <a href="/">تبلیغات گوگل </a>
+              <a href="/services/development">برنامه نویسی </a>
+            </li>
+
+            <li
+              class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
+            >
+              <a href="/services/google-ads">تبلیغات گوگل </a>
             </li>
           </ul>
         </li>
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
-          <Icon name="mdi:bag-checked" size={22} /><a href="/">نمونه کارها</a>
+          <Icon name="mdi:bag-checked" size={22} /><a href="/portfolios"
+            >نمونه کارها</a
+          >
         </li>
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
-          <Icon name="mdi:file-document-multiple" size={22} /><a href="/"
+          <Icon name="mdi:file-document-multiple" size={22} /><a href="/blog"
             >مقالات</a
           >
         </li>
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
-          <Icon name="mdi:dollar" size={22} /><a href="/">تعرفه ها </a>
+          <Icon name="mdi:dollar" size={22} /><a href="/#pricing">تعرفه ها </a>
         </li>
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
-          <Icon name="mdi:about-variant" size={22} /><a href="/"> درباره ما </a>
+          <Icon name="mdi:about-variant" size={22} /><a href="/contact">
+            درباره ما
+          </a>
         </li>
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
-          <Icon name="mdi:support" size={22} /><a href="/"> تماس </a>
+          <Icon name="mdi:support" size={22} /><a href="/contact"> تماس </a>
         </li>
       </ul>
 
@@ -125,8 +129,10 @@ import { Button } from "./ui/button";
       </script>
     </nav>
     <div class="flex gap-2 items-end">
-      <h2 class="text-white text-md font-[dune-rise]">smart IT</h2>
-      <img src="/images/logo.svg" alt="logo smart it" width="35" />
+      <h2 class="text-white text-base font-[dune-rise] leading-4 font-semibold">
+        smart <span class="text-sky-400">IT</span>
+      </h2>
+      <img src="/images/logo.svg" alt="logo smart it" width="28" />
     </div>
   </div>
 </header>

@@ -7,11 +7,13 @@ interface Props {
 const { title, subtitle, effectiveTitle } = Astro.props;
 ---
 
-<div class="flex flex-col gap-4 md:gap-6 relative md:pt-8">
+<div class="flex flex-col gap-1 md:gap-6 relative md:pt-8">
   <h2 class="text-3xl md:text-5xl text-center font-semibold">{title}</h2>
-  <p class="colored-title font-medium text-center">{subtitle}</p>
+  <p class="colored-title font-medium text-center text-sm md:text-base">
+    {subtitle}
+  </p>
   <span
-    class="uppercase font-medium tracking-widest text-5xl md:text-9xl section-title-effect top-0 right-0 w-full absolute text-center"
+    class="uppercase font-medium tracking-widest text-4xl md:text-9xl section-title-effect top-0 right-0 w-full absolute text-center"
     >{effectiveTitle}</span
   >
 </div>

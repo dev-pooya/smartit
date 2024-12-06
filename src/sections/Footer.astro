@@ -31,7 +31,7 @@ import { Icon } from "astro-icon/components";
           .سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز است
         </p>
       </div>
-      <ul class="flex flex-col gap-5 pb-3 md:pb-0">
+      <ul class="flex flex-col gap-3 md:gap-5 pb-3 md:pb-0">
         <li class="opacity-80 hover:opacity-100">
           <a href="#">درباره ما</a>
         </li>
@@ -45,7 +45,7 @@ import { Icon } from "astro-icon/components";
           <a href="#"> تعرفه ها</a>
         </li>
       </ul>
-      <ul class="flex flex-col gap-5">
+      <ul class="flex flex-col gap-4 md:gap-5">
         <li class="flex gap-2 items-center opacity-80 hover:opacity-100">
           <Icon name="mdi:phone" size={25} />
           <p dir="ltr">044-342 22508</p>
@@ -53,14 +53,16 @@ import { Icon } from "astro-icon/components";
           <Icon name="mdi:phone" size={25} />
           <p dir="ltr">044-342 22008</p>
         </li><li class="flex gap-2 opacity-80 hover:opacity-100">
-          <Icon name="mdi:location-radius" size={25} />
-          <p>منطقه آزاد ماکو ، شهرک ولیعصر ، ساختمان پارمیس ۳ ، طبقه ۳</p>
+          <Icon name="mdi:location-radius" size={25} class="shrink-0" />
+          <p class="text-sm md:text-base">
+            منطقه آزاد ماکو ، شهرک ولیعصر ، ساختمان پارمیس ۳ ، طبقه ۳
+          </p>
         </li>
       </ul>
     </div>
-    <hr />
-    <div class="flex justify-between py-3">
-      <ul class="flex gap-5 md:gap-8">
+    <hr class="mt-4 md:mt-2" />
+    <div class="flex justify-center md:justify-between py-3">
+      <ul class="md:flex gap-3 md:gap-8 hidden">
         <li class="dark:text-white/70 dark:hover:text-white">
           <a href="/">
             <Icon name="mdi:instagram" size={18} />
