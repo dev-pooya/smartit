@@ -1,4 +1,5 @@
 ---
+import OrderDrawerTrigger from "@/components/OrderDrawerTrigger";
 import SectionTitle from "@/components/SectionTitle.astro";
 import { Button } from "@/components/ui/button";
 ---
@@ -162,9 +163,12 @@ import { Button } from "@/components/ui/button";
                     >
                   </li>
                 </ul><div class="mt-auto">
-                  <Button variant="outline" className="w-full mt-6"
-                    ><a href="/signup/">مشاوره و سفارش</a></Button
-                  >
+                  <OrderDrawerTrigger
+                    label="مشاوره و سفارش"
+                    variant="outline"
+                    client:load
+                    className="w-full mt-6"
+                  />
                 </div>
               </div>
             </div>
@@ -376,9 +380,11 @@ import { Button } from "@/components/ui/button";
                     >
                   </li>
                 </ul><div class="mt-auto">
-                  <Button className="w-full mt-6">
-                    <a href="/signup/">مشاوره و سفارش</a>
-                  </Button>
+                  <OrderDrawerTrigger
+                    label="مشاوره و سفارش"
+                    className="w-full mt-6"
+                    client:load
+                  />
                 </div>
               </div>
             </div>
@@ -617,9 +623,12 @@ import { Button } from "@/components/ui/button";
                   </li>
                 </ul>
                 <div class="mt-auto">
-                  <Button variant="outline" className="w-full mt-6"
-                    ><a class="" href="/signup/">مشاوره و سفارش </a></Button
-                  >
+                  <OrderDrawerTrigger
+                    label="مشاوره و سفارش"
+                    className="w-full mt-6"
+                    variant="outline"
+                    client:load
+                  />
                 </div>
               </div>
             </div>

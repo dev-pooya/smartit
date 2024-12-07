@@ -16,17 +16,20 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Icon } from "astro-icon/components";
+import SectionTitle from "@/components/SectionTitle.astro";
 ---
 
 <Layout title="تماس با ما">
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">
-    <div class="mx-auto max-w-screen-xl">
-      <h1 class="colored-title text-5xl text-center font-medium py-12">
-        تماس با ما
-      </h1>
-      <div class="grid md:grid-cols-2 gap-10">
+    <div class="mx-auto max-w-screen-xl md:pt-20">
+      <SectionTitle
+        title="تماس با ما"
+        effectiveTitle="contact us"
+        subtitle="ارتباط با کارشناسان مجموعه"
+      />
+      <div class="grid md:grid-cols-2 gap-10 md:pt-20">
         <div>
           <p class="pl-10 pr-5 md:pr-0 leading-7">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با

@@ -82,7 +82,9 @@
     @apply bg-background text-foreground;
   }
 }
-
+body.overflow-x-hidden[data-scroll-locked] {
+  margin-right: 0 !important;
+}
 html {
   scroll-behavior: smooth;
 }

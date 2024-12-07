@@ -6,6 +6,7 @@ import Layout from "@/layouts/Layout.astro";
 import Footer from "@/sections/Footer.astro";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SectionTitle from "@/components/SectionTitle.astro";
 
 const blogs = await getCollection("blogs");
 ---
@@ -15,10 +16,12 @@ const blogs = await getCollection("blogs");
   <MobileHeader />
   <main class="sm:pt-20">
     <div class="max-w-screen-xl mx-auto py-10 px-5">
-      <h1 class="colored-title text-5xl font-medium text-center py-10">
-        وبلاگ
-      </h1>
-      <section class="">
+      <SectionTitle
+        title="وبلاگ"
+        subtitle="اخبار و آموزش های حوزه دیجیتال"
+        effectiveTitle="blog"
+      />
+      <section class="pt-10">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           {
             blogs.map(({ slug, data }) => (
