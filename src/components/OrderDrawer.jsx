@@ -75,29 +75,6 @@ function OrderDrawer() {
       </Drawer>
     );
   }
-  // return (
-  //   <Dialog open={isOpen} onOpenChange={(open) => !open && closeDrawer()}>
-  //     <DialogContent className="sm:max-w-[425px]">
-  //       <DialogHeader>
-  //         <DialogTitle className="text-right pt-10">
-  //           {" "}
-  //           فرم زیر را پر کنید{" "}
-  //         </DialogTitle>
-  //         <DialogDescription className="text-right">
-  //           کارشناسان ما در اولین فرصت با شما تماس خواهند گرفت
-  //         </DialogDescription>
-  //       </DialogHeader>
-  //       <form action="" class="px-5 md:px-0 flex flex-col gap-5">
-  //         <div class="flex gap-3">
-  //           <Input placeholder="نام و نام خانوادگی" />
-  //           <Input placeholder="091 XXXX XXXX" type="tel" />
-  //         </div>
-  //         <Textarea placeholder="پیام خود را بنویسید" rows={7} />
-  //         <Button className="w-full"> ارسال </Button>
-  //       </form>
-  //     </DialogContent>
-  //   </Dialog>
-  // );
 }
 
 export default OrderDrawer;
