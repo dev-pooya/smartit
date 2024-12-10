@@ -3,16 +3,19 @@ import "aos/dist/aos.css";
 import "../styles/globals.css";
 interface Props {
   title: string;
+  keywords?: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, keywords, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="fa" dir="rtl" class="dark font-custom overflow-x-hidden">
+<html lang="fa" dir="rtl" class="dark font-custom">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
     <link rel="stylesheet" href="/fonts/font.css" />

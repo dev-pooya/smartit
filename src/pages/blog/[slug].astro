@@ -29,15 +29,17 @@ if (!blog) {
 // Render the Markdown content and headings
 const { Content } = await blog.render();
 
-const { title, thumbnail, tags, headings } = blog.data;
+const { title, thumbnail, tags, headings, keywords, description } = blog.data;
 ---
 
-<Layout title={title}>
+<Layout title={title} keywords={keywords} description={description}>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">
-    <div class="max-w-screen-xl mx-auto p-5 md:grid md:grid-cols-4 md:gap-6">
-      <div class="mx-auto md:w-1/2 col-span-4">
+    <div
+      class="max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-5 md:grid md:grid-cols-4 md:gap-6"
+    >
+      <div class="mx-auto md:w-3/4 col-span-4">
         <img src={thumbnail} class="w-full rounded-xl" />
       </div>
       <h1
@@ -49,17 +51,26 @@ const { title, thumbnail, tags, headings } = blog.data;
         <Content />
       </article>
       <aside class="hidden md:block">
-        <Card className="p-3 sticky top-20">
+        <Card className="p-4 sticky top-10">
           <ul class="flex flex-col gap-3">
             {
               headings.map((heading) => (
-                <li class="font-medium  py-3 ">
+                <li class="font-medium py-3 ">
                   <a href={`#${heading.id}`}> {heading.title}</a>
                   {heading.subHeadings && (
-                    <ul class="">
+                    <ul class="py-3 list-inside list-[square]">
                       {heading.subHeadings.map((sub) => (
-                        <li class="pr-4 text-sm py-1 ">
-                          <a href={`#${sub.id}`}>- {sub.title}</a>
+                        <li class="pr-1 text-sm py-1 ">
+                          <a href={`#${sub.id}`}>{sub.title}</a>
+                          {sub.subHeadings && (
+                            <ul class="py-2 list-inside list-[circle] my-2">
+                              {sub.subHeadings.map((subSub) => (
+                                <li class="pr-2 text-sm py-1 ">
+                                  <a href={`#${subSub.id}`}> {subSub.title}</a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>

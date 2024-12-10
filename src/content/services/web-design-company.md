@@ -1,5 +1,5 @@
 ---
-title: " طراحی و توسعه سایت شرکتی"
+title: " طراحی  سایت شرکتی"
 subtitle: ""
 effectiveTitle: "web designing"
 pricingPlans:
@@ -45,7 +45,7 @@ faqs:
     answer: "مشاوره و آنالیز سئو سایت که توسط شرکت وب‌رمز ارائه می‌گردد شامل گزارش تحلیل سئو و انجام فرآیندهای سئو داخلی و سئو خارجی در طی یک قرارداد یک ساله ‌می‌باشد.  "
 ---
 
-<div class='grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-16 md:gap-y-60 pt-12 md:pt-20 items-center' >
+<div class='grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-16 md:gap-y-60 pt-12 md:pt-28 items-center'>
 <div class='md:col-span-3'>
 <h2 class='text-3xl py-3' data-aos='fade-left'>ساخت سایت با به روز ترین تکنولوژی و برترین فریمورک های دنیا</h2>
 <p class='text-justify opacity-85' data-aos='fade-up'>در دنیای امروز طراحی سایت (Website Design) یکی از مهمترین ابزارهای موفقیت کسب و کارها به شمار می‌رود. ساخت وب سایت جذاب و کاربرپسند، نه تنها به جذب مشتریان جدید کمک می‌کند، بلکه اعتبار برند شما را نیز بالا می‌برد. وب‌رمز با داشتن تیم متخصصان طراح سایت حرفه‌ای و ارائه خدمات ساخت سایت و بهینه سازی شده برای موتورهای جستجو (SEO)، به شما کمک می‌کند تا در دنیای دیجیتال آنلاین، بدرخشید. 
@@ -53,7 +53,7 @@ faqs:
 <h2 class='text-3xl pt-4 pb-2' data-aos='fade-up'>طراحی حرفه ای هوش آی تی انتخاب اول برنده ها</h2>
 <p class='leading-6 opacity-85 text-justify' data-aos='fade-up'>ایجاد و ساخت وب سایت حرفه ای ابزاری قدرتمند برای دستیابی به اهداف کسب و کار شماست. ما در وب‌رمز، با تکیه بر بیش از دو دهه سابقه در زمینه خدمات طراحی وب ، تکنولوژی ساخت طراحی وبسایت شما را طوری پیاده سازی می‌کنیم که موجب افزایش اعتبار و بهبود برندینگ، جذب مشتریان جدید و افزایش فروش شود.</p>
 </div>
-<img src='/images/web-design.svg' class='md:col-span-2 row-start-1' data-aos='zoom-in'/>
+<img src='/images/web-design.svg' class='md:col-span-2 row-start-1 md:row-auto' data-aos='zoom-in'/>
 <!-- section 2 -->
 <img src='/images/team.svg' class='md:col-span-2' data-aos='zoom-in'/>
 <div class='md:col-span-3'>
@@ -96,6 +96,6 @@ faqs:
 
 </ul>
 </div>
-<img src='/images/web-attribute.svg' class='md:col-span-2 row-start-5' data-aos='zoom-in'/>
+<img src='/images/web-attribute.svg' class='md:col-span-2 row-start-5 md:row-auto' data-aos='zoom-in'/>
 
 </div>
