@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import dashboardImage from "../images/dashboard.webp";
+import dashboardImage3 from "../images/dashboard_3.webp";
+---
+
 <section class="py-8">
   <div class="max-w-screen-xl px-5 mx-auto flex flex-col gap-16 md:gap-24">
     <article class="grid gap-8 md:grid-cols-2 items-center">
@@ -19,14 +25,10 @@
           class="relative h-full rounded-2xl dark:from-sky-600 from-sky-600 bg-gradient-to-br dark:to-stone-800/60 after:absolute after:bg-stone-800/30 after:inset-[1px] after:rounded-[calc(1rem-1px)] dark:after:bg-stone-800/50 dark:via-stone-800/60 to-stone-800/70 via-stone-800/70"
           style="opacity: 1; transform: translateX(0px);"
         >
-          <img
-            alt=""
+          <Image
+            src={dashboardImage}
+            alt="dashboard image"
             class="w-full relative rounded-2xl border border-transparent object-cover p-1 z-10 -hue-rotate-[45deg]"
-            decoding="async"
-            height="700"
-            loading="lazy"
-            src="/images/dashboard.webp"
-            width="1120"
           />
         </div>
       </div>
@@ -41,14 +43,10 @@
           class="relative h-full rounded-2xl dark:from-sky-600 from-sky-600 bg-gradient-to-br dark:to-stone-800/60 after:absolute after:bg-stone-800/30 after:inset-[1px] after:rounded-[calc(1rem-1px)] dark:after:bg-stone-800/50 dark:via-stone-800/60 to-stone-800/70 via-stone-800/70"
           style="opacity: 1; transform: translateX(0px);"
         >
-          <img
-            alt=""
+          <Image
+            src={dashboardImage3}
+            alt="dashboard image ecommerce"
             class="w-full relative rounded-2xl border border-transparent object-cover p-1 z-10 -hue-rotate-[45deg]"
-            decoding="async"
-            height="700"
-            loading="lazy"
-            src="/images/dashboard_3.webp"
-            width="1120"
           />
         </div>
       </div>
@@ -87,14 +85,10 @@
           class="relative h-full rounded-2xl dark:from-sky-600 from-sky-600 bg-gradient-to-br dark:to-stone-800/60 after:absolute after:bg-stone-800/30 after:inset-[1px] after:rounded-[calc(1rem-1px)] dark:after:bg-stone-800/50 dark:via-stone-800/60 to-stone-800/70 via-stone-800/70"
           style="opacity: 1; transform: translateX(0px);"
         >
-          <img
-            alt=""
+          <Image
+            src={dashboardImage}
+            alt="dashboard image crm"
             class="w-full relative rounded-2xl border border-transparent object-cover p-1 z-10 -hue-rotate-[45deg]"
-            decoding="async"
-            height="700"
-            loading="lazy"
-            src="/images/dashboard_2.webp"
-            width="1120"
           />
         </div>
       </div>

@@ -10,10 +10,14 @@ import { Button } from "./ui/button";
     </Button>
 
     <nav
-      class="fixed top-0 bottom-0 right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"
+      class="fixed top-0 h-screen right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"
       data-element="canvas-slider"
     >
-      <Button className="mr-auto" data-element="close-slider-btn" size="icon">
+      <Button
+        className="mr-auto shrink-0"
+        data-element="close-slider-btn"
+        size="icon"
+      >
         <Icon name="mdi:close" size={25} />
       </Button>
       <ul class="mt-5">
@@ -26,14 +30,15 @@ import { Button } from "./ui/button";
             class="flex gap-2 items-center"
             data-element="collapse-trigger"
             role="button"
-            ><Icon name="mdi:hand-tap" size={22} /><span>خدمات</span><Icon
+            ><Icon name="mdi:hand-tap" size={22} /><span>خدمات</span>
+            <Icon
               name="mdi:chevron-left"
               size={22}
               class="mr-auto duration-200 -rotate-90"
               data-element="trigger-icon"
             /></a
           >
-          <ul class="pr-3 pt-4 overflow-hidden">
+          <ul class="pr-3 pt-4 overflow-hidden max-h-0">
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >

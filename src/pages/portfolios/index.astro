@@ -5,6 +5,8 @@ import MobileHeader from "@/components/MobileHeader.astro";
 import Layout from "@/layouts/Layout.astro";
 import PortfolioCard from "@/components/PortfolioCard.astro";
 import SectionTitle from "@/components/SectionTitle.astro";
+import BannerSection from "@/sections/BannerSection.astro";
+import Footer from "@/sections/Footer.astro";
 
 const portfolios = await getCollection("portfolios");
 ---
@@ -31,6 +33,8 @@ const portfolios = await getCollection("portfolios");
       </section>
     </div>
   </main>
+  <BannerSection />
+  <Footer />
   <script>
     const cards = document.querySelectorAll("[data-element=portfolio-card]");
 

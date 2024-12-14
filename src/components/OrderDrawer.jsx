@@ -20,6 +20,8 @@ import {
 import { servicesCard } from "@/content/services/servicesCard";
 import { Label } from "./ui/label";
 
+const API_BASE_URL = "https://api.smartitgroups.com";
+
 function OrderDrawer() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -56,7 +58,7 @@ function OrderDrawer() {
   async function submit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const response = await fetch("http://127.0.0.1:8000/api/contact", {
+    const response = await fetch(`${API_BASE_URL}/api/contact`, {
       method: "POST",
       body: formData,
     });

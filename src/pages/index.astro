@@ -11,6 +11,7 @@ import FandQSection from "@/sections/FandQSection.astro";
 import Testimonials from "@/sections/Testimonials.astro";
 import Footer from "@/sections/Footer.astro";
 import BannerSection from "@/sections/BannerSection.astro";
+import OrderDrawer from "@/components/OrderDrawer";
 ---
 
 <Layout title="خانه">
@@ -34,5 +35,6 @@ import BannerSection from "@/sections/BannerSection.astro";
     <BannerSection />
     <!-- Footer section  -->
     <Footer />
+    <OrderDrawer client:load />
   </main>
 </Layout>

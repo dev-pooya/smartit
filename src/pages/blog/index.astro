@@ -7,6 +7,7 @@ import Footer from "@/sections/Footer.astro";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionTitle from "@/components/SectionTitle.astro";
+import BannerSection from "@/sections/BannerSection.astro";
 
 const blogs = await getCollection("blogs");
 ---
@@ -41,7 +42,7 @@ const blogs = await getCollection("blogs");
                   </h2>
                 </a>
 
-                <ul class="flex gap-2">
+                <ul class="flex gap-2 flex-wrap">
                   {data.tags.map((tag) => (
                     <li>
                       <Badge variant="secondary">{tag}</Badge>
@@ -55,5 +56,6 @@ const blogs = await getCollection("blogs");
       </section>
     </div>
   </main>
+  <BannerSection />
   <Footer />
 </Layout>

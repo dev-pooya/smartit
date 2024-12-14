@@ -5,6 +5,7 @@ import MobileHeader from "@/components/MobileHeader.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/layouts/Layout.astro";
+import BannerSection from "@/sections/BannerSection.astro";
 import Footer from "@/sections/Footer.astro";
 import { getCollection, getEntry } from "astro:content";
 
@@ -83,5 +84,6 @@ const { title, thumbnail, tags, headings, keywords, description } = blog.data;
       </aside>
     </div>
   </main>
+  <BannerSection />
   <Footer />
 </Layout>

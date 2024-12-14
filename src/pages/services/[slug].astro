@@ -6,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/layouts/Layout.astro";
+import BannerSection from "@/sections/BannerSection.astro";
 import Footer from "@/sections/Footer.astro";
 import { getCollection, getEntry } from "astro:content";
 
@@ -105,6 +106,7 @@ const { title, pricingPlans, faqs, subtitle, effectiveTitle } = service.data;
         </section>
       </section>
     </div>
+    <BannerSection />
   </main>
   <Footer />
 </Layout>
