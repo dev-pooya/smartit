@@ -17,9 +17,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Icon } from "astro-icon/components";
 import SectionTitle from "@/components/SectionTitle.astro";
+
+const title = "تماس با هوش آی تی | مشاوره و پشتیبانی خدمات دیجیتال";
+const description =
+  "برای دریافت مشاوره تخصصی در زمینه طراحی وب‌سایت، سئو، مدیریت اینستاگرام و خدمات دیجیتال مارکتینگ با تیم هوش آی تی تماس بگیرید. ما آماده پاسخگویی به سوالات شما هستیم.";
+const keywords =
+  "تماس با هوش آی تی، مشاوره طراحی سایت، پشتیبانی خدمات وب، ارتباط با هوش آی تی، خدمات دیجیتال مارکتینگ، مشاوره سئو، خدمات مدیریت اینستاگرام، شماره تماس هوش آی تی";
 ---
 
-<Layout title="تماس با ما">
+<Layout title={title} description={description} keywords={keywords}>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">

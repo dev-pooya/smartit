@@ -12,9 +12,15 @@ import Testimonials from "@/sections/Testimonials.astro";
 import Footer from "@/sections/Footer.astro";
 import BannerSection from "@/sections/BannerSection.astro";
 import OrderDrawer from "@/components/OrderDrawer";
+
+const title = "هوش آی تی | طراحی وب‌سایت حرفه‌ای، سئو و خدمات دیجیتال مارکتینگ";
+const description =
+  "هوش آی تی، ارائه‌دهنده خدمات حرفه‌ای طراحی وب‌سایت، برنامه‌نویسی، سئو، مدیریت اینستاگرام، طراحی گرافیک و تبلیغات گوگل ادز. با ما کسب‌وکار خود را در دنیای دیجیتال متمایز کنید.";
+const keywords =
+  "طراحی وب‌سایت، برنامه‌نویسی وب، سئو، بهینه‌سازی سایت، تبلیغات گوگل، مدیریت اینستاگرام، طراحی گرافیک، بازاریابی دیجیتال، هوش آی تی، خدمات طراحی سایت، رشد کسب‌وکار آنلاین";
 ---
 
-<Layout title="خانه">
+<Layout title={title} description={description} keywords={keywords}>
   <Header />
   <MobileHeader />
   <main class="">

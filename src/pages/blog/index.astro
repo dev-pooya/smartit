@@ -8,12 +8,19 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionTitle from "@/components/SectionTitle.astro";
 import BannerSection from "@/sections/BannerSection.astro";
-import { Image } from "astro:assets";
+
+const title = "مقالات هوش آی تی | آموزش طراحی وب، سئو و دیجیتال مارکتینگ";
+
+const description =
+  "به بخش مقالات هوش آی تی خوش آمدید! جدیدترین مطالب آموزشی و تخصصی در زمینه طراحی وب‌سایت، بهینه‌سازی موتورهای جستجو (SEO)، مدیریت اینستاگرام و دیجیتال مارکتینگ را مطالعه کنید.";
+
+const keywords =
+  "مقالات طراحی وب، آموزش سئو، مقالات دیجیتال مارکتینگ، بلاگ هوش آی تی، آموزش مدیریت اینستاگرام، طراحی سایت 2024، بهینه‌سازی سایت، محتوای تخصصی دیجیتال مارکتینگ";
 
 const blogs = await getCollection("blogs");
 ---
 
-<Layout title="وبلاگ">
+<Layout title={title} , description={description} keywords={keywords}>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">

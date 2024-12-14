@@ -32,7 +32,11 @@ const { title, thumbnail, tags, headings, keywords, description, alt } =
   blog.data;
 ---
 
-<Layout title={title} keywords={keywords} description={description}>
+<Layout
+  title={title + " | هوش آی تی"}
+  keywords={keywords}
+  description={description}
+>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">

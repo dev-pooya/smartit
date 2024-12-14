@@ -31,10 +31,22 @@ if (!service) {
 // Render the Markdown content and headings
 const { Content } = await service.render();
 
-const { title, pricingPlans, faqs, subtitle, effectiveTitle } = service.data;
+const {
+  title,
+  description,
+  keywords,
+  pricingPlans,
+  faqs,
+  subtitle,
+  effectiveTitle,
+} = service.data;
 ---
 
-<Layout title={title}>
+<Layout
+  title={title + " | هوش آی تی"}
+  description={description}
+  keywords={keywords}
+>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">

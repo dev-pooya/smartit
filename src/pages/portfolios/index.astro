@@ -9,9 +9,15 @@ import BannerSection from "@/sections/BannerSection.astro";
 import Footer from "@/sections/Footer.astro";
 
 const portfolios = await getCollection("portfolios");
+
+const title = "نمونه کارهای هوش آی تی | پروژه‌های طراحی وب و دیجیتال مارکتینگ";
+const description =
+  "نمونه کارهای حرفه‌ای تیم هوش آی تی در زمینه طراحی وب‌سایت، سئو، مدیریت اینستاگرام و دیجیتال مارکتینگ را مشاهده کنید. ما به کسب‌وکار شما کمک می‌کنیم تا در فضای آنلاین بدرخشید.";
+const keywords =
+  "نمونه کار طراحی وب، نمونه پروژه‌های هوش آی تی، نمونه کار سئو، نمونه کار دیجیتال مارکتینگ، نمونه پروژه مدیریت اینستاگرام، طراحی سایت حرفه‌ای، پروژه‌های موفق هوش آی تی";
 ---
 
-<Layout title="نمونه کارها">
+<Layout title={title} description={description} keywords={keywords}>
   <Header />
   <MobileHeader />
   <main class="sm:pt-20">
