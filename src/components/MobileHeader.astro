@@ -7,8 +7,14 @@ import siteLogo from "../images/siteLogo.svg";
 
 <header class="relative sm:hidden">
   <div class="max-w-screen-xl flex justify-between items-center px-6 py-2">
-    <Button data-element="open-slider-btn" size="icon" variant="outline">
-      <Icon name="mdi:menu" />
+    <Button
+      data-element="open-slider-btn"
+      size="icon"
+      variant="outline"
+      aria-label="Open sidebar menu"
+    >
+      <span hidden>باز کردن منو کناری</span>
+      <Icon name="mdi:menu" aria-hidden="true" focusable="false" />
     </Button>
 
     <nav
@@ -19,8 +25,10 @@ import siteLogo from "../images/siteLogo.svg";
         className="mr-auto shrink-0"
         data-element="close-slider-btn"
         size="icon"
+        aria-label="close sidebar menu"
       >
-        <Icon name="mdi:close" size={25} />
+        <span hidden>بستن منو کناری</span>
+        <Icon name="mdi:close" size={25} aria-hidden="true" focusable="false" />
       </Button>
       <ul class="mt-5">
         <li class="py-3 text-lg font-medium text-white flex gap-2 items-center">
