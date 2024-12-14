@@ -5,9 +5,10 @@ interface Props {
   title: string;
   keywords?: string;
   description?: string;
+  prefetch?: string;
 }
 
-const { title, keywords, description } = Astro.props;
+const { title, keywords, description, prefetch } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ const { title, keywords, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
     <link rel="stylesheet" href="/fonts/font.css" />
     <meta name="generator" content={Astro.generator} />
+    {prefetch && <link rel="prefetch" href={prefetch} />}
     <title>{title}</title>
   </head>
   <body class="bg-background overflow-x-hidden">
