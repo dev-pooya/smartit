@@ -45,6 +45,11 @@ faqs:
     answer: "مشاوره و آنالیز سئو سایت که توسط شرکت وب‌رمز ارائه می‌گردد شامل گزارش تحلیل سئو و انجام فرآیندهای سئو داخلی و سئو خارجی در طی یک قرارداد یک ساله ‌می‌باشد.  "
 ---
 
+import { Image } from "astro:assets";
+import webDesignImage from "../../images/web-design.svg";
+import teamImage from "../../images/web-design.svg";
+import webAttributeImage from "../../images/web-attribute.svg";
+
 <div class='grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-16 md:gap-y-60 pt-12 md:pt-28 items-center'>
 <div class='md:col-span-3'>
 <h2 class='text-3xl py-3' data-aos='fade-left'>ساخت سایت با به روز ترین تکنولوژی و برترین فریمورک های دنیا</h2>
@@ -53,49 +58,95 @@ faqs:
 <h2 class='text-3xl pt-4 pb-2' data-aos='fade-up'>طراحی حرفه ای هوش آی تی انتخاب اول برنده ها</h2>
 <p class='leading-6 opacity-85 text-justify' data-aos='fade-up'>ایجاد و ساخت وب سایت حرفه ای ابزاری قدرتمند برای دستیابی به اهداف کسب و کار شماست. ما در وب‌رمز، با تکیه بر بیش از دو دهه سابقه در زمینه خدمات طراحی وب ، تکنولوژی ساخت طراحی وبسایت شما را طوری پیاده سازی می‌کنیم که موجب افزایش اعتبار و بهبود برندینگ، جذب مشتریان جدید و افزایش فروش شود.</p>
 </div>
-<img src='/images/web-design.svg' class='md:col-span-2 row-start-1 md:row-auto' data-aos='zoom-in'/>
-<!-- section 2 -->
-<img src='/images/team.svg' class='md:col-span-2' data-aos='zoom-in'/>
-<div class='md:col-span-3'>
-<h2 class='text-3xl py-3' data-aos='fade-left'>چرا هوش آی تی را برای طراحی وب سایت خود انتخاب کنید؟</h2>
-<h3 class='text-sky-400 pb-5' data-aos='fade-up'>طراحی وب سایت مدرن و به‌روز با کدنویسی بهینه و استاندارد و پشتیبانی حرفه‌ای</h3>
-<ul class='p-2 flex flex-col gap-2 font-light' data-aos='fade-up'>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> تیم متخصص و با تجربه: وب‌رمز با بهره گیری از تیمی متخصص و با تجربه در زمینه طراحی وب سایت، به شما اطمینان می‌دهد که وب سایتی منحصر به فرد و متناسب با نیازهای شما را دریافت خواهید کرد. </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> طراحی واکنش گرا (Responsive): طراحی وب سایت های واکنش گرا، به این معنی است که وب سایت شما در تمامی دستگاه‌ها، از جمله کامپیوتر، تبلت و موبایل، به بهترین شکل نمایش داده خواهد شد. </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> بهینه سازی برای موتورهای جستجو (SEO): وب‌رمز با رعایت اصول سئو در طراحی وب سایت، به شما کمک می‌کند تا در نتایج جستجوی گوگل و سایر موتورهای جستجو، رتبه بهتری کسب کنید و در معرض دید مشتریان بیشتری قرار بگیرید. </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> امنیت بالا: وب‌رمز با استفاده از آخرین تکنولوژی‌های امنیتی، از وب سایت شما در برابر حملات سایبری محافظت می‌کند. </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>   پشتیبانی 24 ساعته: تیم پشتیبانی وب‌رمز، همواره آماده پاسخگویی به سوالات و مشکلات شما در زمینه وب سایت می‌باشد. </li>
-</ul>
+<Image src={webDesignImage} alt='web design' class='md:col-span-2 row-start-1 md:row-auto' data-aos='zoom-in' />
+<Image src={teamImage} alt='team up' class="md:col-span-2" data-aos="zoom-in"  />
+
+<div class="md:col-span-3">
+  <h2 class="text-3xl py-3" data-aos="fade-left">
+    چرا هوش آی تی را برای طراحی وب سایت خود انتخاب کنید؟
+  </h2>
+  <h3 class="text-sky-400 pb-5" data-aos="fade-up">
+    طراحی وب سایت مدرن و به‌روز با کدنویسی بهینه و استاندارد و پشتیبانی حرفه‌ای
+  </h3>
+  <ul class="p-2 flex flex-col gap-2 font-light" data-aos="fade-up">
+    <li>
+      <span class="text-2xl pe-1 text-sky-400">&#10003;</span> تیم متخصص و با
+      تجربه: وب‌رمز با بهره گیری از تیمی متخصص و با تجربه در زمینه طراحی وب
+      سایت، به شما اطمینان می‌دهد که وب سایتی منحصر به فرد و متناسب با نیازهای
+      شما را دریافت خواهید کرد.{" "}
+    </li>
+    <li>
+      <span class="text-2xl pe-1 text-sky-400">&#10003;</span> طراحی واکنش گرا
+      (Responsive): طراحی وب سایت های واکنش گرا، به این معنی است که وب سایت شما
+      در تمامی دستگاه‌ها، از جمله کامپیوتر، تبلت و موبایل، به بهترین شکل نمایش
+      داده خواهد شد.{" "}
+    </li>
+    <li>
+      <span class="text-2xl pe-1 text-sky-400">&#10003;</span> بهینه سازی برای
+      موتورهای جستجو (SEO): وب‌رمز با رعایت اصول سئو در طراحی وب سایت، به شما
+      کمک می‌کند تا در نتایج جستجوی گوگل و سایر موتورهای جستجو، رتبه بهتری کسب
+      کنید و در معرض دید مشتریان بیشتری قرار بگیرید.{" "}
+    </li>
+    <li>
+      <span class="text-2xl pe-1 text-sky-400">&#10003;</span> امنیت بالا:
+      وب‌رمز با استفاده از آخرین تکنولوژی‌های امنیتی، از وب سایت شما در برابر
+      حملات سایبری محافظت می‌کند.{" "}
+    </li>
+    <li>
+      <span class="text-2xl pe-1 text-sky-400">&#10003;</span> پشتیبانی 24
+      ساعته: تیم پشتیبانی وب‌رمز، همواره آماده پاسخگویی به سوالات و مشکلات شما
+      در زمینه وب سایت می‌باشد.{" "}
+    </li>
+  </ul>
 </div>
-<!-- section 3 -->
 
 <div class='md:col-span-3'>
 <h2 class='text-3xl py-3 ' data-aos='fade-left'>طراحی سایت حرفه ای هوش آی تی چه ویژگی‌هایی دارد؟ </h2>
 <h3 class='text-sky-400 pb-5' data-aos='fade-up'> استفاده از آخرین تکنولوژی‌های طراحی وب سایت همراه تضمین کیفیت و سرعت سایت</h3>
 <p class='p-2 leading-7' data-aos='fade-up'>پروژه راه اندازی سایت با دریافت مشاوره و پس از آن برنامه ریزی و شروع به اجرای فرآیندهای فنی برنامه نویسی و پیاده سازی سایت آغاز می‌شود. با طراحی سایت حرفه‌ای می‌توانید به تولید محتوای مناسب و اطلاع رسانی به مخاطبان و مشتریان بپردازید و برند خود را بسازید و توسعه دهید. برخی از ویژگی‌های پیاده سازی سایت در شرکت وب‌رمز به شرح زیر است:</p>
 <ul class='p-2 flex flex-col gap-2 font-light' data-aos='fade-up'>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>مشاوره رایگان حضوری یا آنلاین برای مشتریان ساخت و طراحی وب‌سایت در تهران و کرج</li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>ارائه طیف وسیعی از خدمات دیجیتال مارکتینگ و میزبانی وب جهت رشد کسب و کار و افزایش فروش
+<li>
+  <span class='text-2xl pe-1 text-sky-400'>&#10003;</span>مشاوره رایگان حضوری یا آنلاین برای مشتریان ساخت و طراحی وب‌سایت در تهران و کرج 
 </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> کدنویسی استاندارد و طراحی وبسایت با وردپرس، زبان برنامه نویسی php یا پایتون
- </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> طراحی وب سایت ریسپانسیو و سازگاری با موبایل (واکنش‌گرا) و تبلت و دسکتاپ
- </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>  عدم نیاز به طراحی اپلیکیشن موبایل جداگانه و کاهش هزینه تمام شده پروژه
- </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>  برنامه نویسی و طراحی فول داینامیک و امکان بروزرسانی توسط مدیر سایت
- </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>   ارايه پنل مدیریت آسان پورتال سایت بدون نیاز به دانش سایت تخصصی
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span>ارائه طیف وسیعی از
+  خدمات دیجیتال مارکتینگ و میزبانی وب جهت رشد کسب و کار و افزایش فروش
 </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span>  ارائه آموزش‌های لازم حضوری (در قالب مستندات) به همراه تهیه فیلم آموزشی
- </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> کدنویسی بهینه و استاندارد با آخرین تکنولوژی‌های طراحی وب سایت و سئو
-  </li>
-<li><span class='text-2xl pe-1 text-sky-400'>&#10003;</span> استفاده از ایده‌های مشتریان و طرح‌های روز برای طراحی وب سایت خلاقانه
-  </li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> کدنویسی استاندارد و
+  طراحی وبسایت با وردپرس، زبان برنامه نویسی php یا پایتون
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> طراحی وب سایت
+  ریسپانسیو و سازگاری با موبایل (واکنش‌گرا) و تبلت و دسکتاپ
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> عدم نیاز به طراحی
+  اپلیکیشن موبایل جداگانه و کاهش هزینه تمام شده پروژه
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> برنامه نویسی و طراحی
+  فول داینامیک و امکان بروزرسانی توسط مدیر سایت
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> ارايه پنل مدیریت آسان
+  پورتال سایت بدون نیاز به دانش سایت تخصصی
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> ارائه آموزش‌های لازم
+  حضوری (در قالب مستندات) به همراه تهیه فیلم آموزشی
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> کدنویسی بهینه و
+  استاندارد با آخرین تکنولوژی‌های طراحی وب سایت و سئو
+</li>
+<li>
+  <span class="text-2xl pe-1 text-sky-400">&#10003;</span> استفاده از ایده‌های
+  مشتریان و طرح‌های روز برای طراحی وب سایت خلاقانه
+</li>
 
 </ul>
 </div>
-<img src='/images/web-attribute.svg' class='md:col-span-2 row-start-5 md:row-auto' data-aos='zoom-in'/>
+<Image src={webAttributeImage} alt='web development attributes' class='md:col-span-2 row-start-5 md:row-auto' data-aos='zoom-in' />
 
 </div>
