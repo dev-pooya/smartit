@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import siteLogo from "../images/siteLogo.svg";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
@@ -76,7 +78,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <h2 class="uppercase font-bold font-[dune-rise] leading-5">
         smart <span class="text-sky-400">it</span>
       </h2>
-      <img src="/images/logo.svg" alt="logo_creativepen" width="30" />
+      <Image src={siteLogo} alt="smartitgroups logo" width={30} />
     </div>
   </div>
 </header>

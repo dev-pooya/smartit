@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Button } from "./ui/button";
+import { Image } from "astro:assets";
+import siteLogo from "../images/siteLogo.svg";
 ---
 
 <header class="relative sm:hidden">
@@ -137,7 +139,7 @@ import { Button } from "./ui/button";
       <h2 class="text-white text-base font-[dune-rise] leading-4 font-semibold">
         smart <span class="text-sky-400">IT</span>
       </h2>
-      <img src="/images/logo.svg" alt="logo smart it" width="28" />
+      <Image src={siteLogo} alt="smartitgroups logo" width={28} />
     </div>
   </div>
 </header>
