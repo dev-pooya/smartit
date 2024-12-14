@@ -1,22 +1,13 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import LogosSection from "../sections/LogosSection.astro";
-import HeroSection from "../sections/HeroSection.astro";
-import ServicesSection from "../sections/ServicesSection.astro";
 import MobileHeader from "@/components/MobileHeader.astro";
-import DescriptionSection from "@/sections/DescriptionSection.astro";
-import PricingSection from "@/sections/PricingSection.astro";
-import FandQSection from "@/sections/FandQSection.astro";
-import Testimonials from "@/sections/Testimonials.astro";
 import Footer from "@/sections/Footer.astro";
 import BannerSection from "@/sections/BannerSection.astro";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Icon } from "astro-icon/components";
 import SectionTitle from "@/components/SectionTitle.astro";
+import ContactForm from "@/components/ContactForm";
 
 const title = "تماس با هوش آی تی | مشاوره و پشتیبانی خدمات دیجیتال";
 const description =
@@ -47,14 +38,7 @@ const keywords =
           </p>
         </div>
         <div>
-          <form action="" class="px-5 md:px-0 flex flex-col gap-5">
-            <div class="flex gap-3">
-              <Input placeholder="نام و نام خانوادگی" />
-              <Input placeholder="091 XXXX XXXX" type="tel" />
-            </div>
-            <Textarea placeholder="پیام خود را بنویسید" rows={7} />
-            <Button className="w-full"> ارسال </Button>
-          </form>
+          <ContactForm client:load />
         </div>
       </div>
       <div
