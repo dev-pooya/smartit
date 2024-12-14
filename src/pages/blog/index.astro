@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionTitle from "@/components/SectionTitle.astro";
 import BannerSection from "@/sections/BannerSection.astro";
+import { Image } from "astro:assets";
 
 const blogs = await getCollection("blogs");
 ---
@@ -31,6 +32,8 @@ const blogs = await getCollection("blogs");
                   src={data.thumbnail}
                   class="rounded-xl"
                   data-aos="zoom-in"
+                  alt={data.alt}
+                  loading="lazy"
                 />
                 <a href={`/blog/${slug}`}>
                   {" "}
