@@ -1,6 +1,7 @@
 ---
 import "aos/dist/aos.css";
 import "../styles/globals.css";
+import OrderDrawer from "@/components/OrderDrawer";
 interface Props {
   title: string;
   keywords?: string;
@@ -26,6 +27,7 @@ const { title, keywords, description, prefetch } = Astro.props;
   </head>
   <body class="bg-background overflow-x-hidden">
     <slot />
+    <OrderDrawer client:load />
   </body>
   <script>
     import AOS from "aos";
