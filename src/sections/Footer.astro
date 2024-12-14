@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import siteLogo from "../images/siteLogo.svg";
 ---
 
 <hr />
@@ -19,9 +21,10 @@ import { Icon } from "astro-icon/components";
               mim javid co
             </p>
           </div>
-          <img
-            src="/images/logo.svg"
-            alt="logo of smart it"
+
+          <Image
+            src={siteLogo}
+            alt="smart it logo"
             class="w-16 mb-1 opacity-90"
           />
         </div>
