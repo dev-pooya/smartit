@@ -12,7 +12,7 @@ import siteLogo from "../images/siteLogo.svg";
     </Button>
 
     <nav
-      class="fixed top-0 h-screen right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"
+      class="fixed top-0 h-lvh right-0 w-80 z-20 translate-x-full duration-200 bg-black/30 backdrop-blur-md flex flex-col p-6"
       data-element="canvas-slider"
     >
       <Button
@@ -40,7 +40,7 @@ import siteLogo from "../images/siteLogo.svg";
               data-element="trigger-icon"
             /></a
           >
-          <ul class="pr-3 pt-4 overflow-hidden max-h-0">
+          <ul class="pr-3 overflow-hidden max-h-0">
             <li
               class="py-2 pr-3 text-lg text-white/80 border-r-2 border-white/40"
             >
@@ -106,20 +106,37 @@ import siteLogo from "../images/siteLogo.svg";
       </ul>
 
       <script>
-        document
-          .querySelector("[data-element=open-slider-btn]")
-          .addEventListener("click", () =>
-            document
-              .querySelector("[data-element=canvas-slider]")
-              .classList.remove("translate-x-full")
-          );
-        document
-          .querySelector("[data-element=close-slider-btn]")
-          .addEventListener("click", () =>
-            document
-              .querySelector("[data-element=canvas-slider]")
-              .classList.add("translate-x-full")
-          );
+        const sidebarOpenBtn = document.querySelector(
+          "[data-element=open-slider-btn]"
+        );
+        const sidebarCanvas = document.querySelector(
+          "[data-element=canvas-slider]"
+        );
+        const sidebarCloseBtn = document.querySelector(
+          "[data-element=close-slider-btn]"
+        );
+
+        // open sidebar
+        sidebarOpenBtn.addEventListener("click", () => {
+          sidebarCanvas.classList.remove("translate-x-full");
+          document.body.style.overflowY = "hidden";
+        });
+        // close sidebar
+        sidebarCloseBtn.addEventListener("click", () => {
+          sidebarCanvas.classList.add("translate-x-full");
+          document.body.style.overflowY = "unset";
+        });
+
+        // close sidebar when clicking outsiude
+        document.addEventListener("mouseup", (e) => {
+          if (
+            !sidebarOpenBtn.contains(e.target) &&
+            !sidebarCanvas.contains(e.target)
+          ) {
+            sidebarCanvas.classList.add("translate-x-full");
+            document.body.style.overflowY = "unset";
+          }
+        });
 
         // collapse menu
         document
