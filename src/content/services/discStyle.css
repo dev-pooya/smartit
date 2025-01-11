@@ -1,0 +1,80 @@
+.disc-list {
+  counter-reset: step;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  direction: ltr;
+}
+.disc-list li {
+  counter-increment: step;
+  position: relative;
+  width: 8.5rem;
+  height: 8.5rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #888;
+  color: #888;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 1.25rem 1.5rem 1.5rem;
+  overflow: visible;
+}
+.disc-list li:nth-child(n) {
+  background: #00afc0;
+  background: linear-gradient(280deg, #1cb5e0 0%, #000851 100%);
+  color: #00afc0;
+  animation: colorChange 3s infinite forwards alternate;
+}
+.disc-list li:nth-child(2n) {
+  background: #00a3e1;
+  background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+  color: #00a3e1;
+  animation: colorChange 3s 1s infinite forwards alternate;
+}
+@media (max-width: 768px) {
+  .disc-list li:nth-child(n + 3) {
+    margin-top: 40px !important;
+  }
+}
+
+.disc-list span {
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "yekanBakh";
+}
+.disc-list span::before {
+  content: counter(step);
+  display: block;
+  font-size: 1.65rem;
+  margin-bottom: 0.1rem;
+  font-weight: 200;
+}
+.disc-list svg {
+  position: absolute;
+  left: -1.5rem;
+  top: -1.5rem;
+  bottom: -1.5rem;
+  right: -1.5rem;
+}
+.disc-list path {
+  stroke: currentColor;
+}
+
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(-50deg);
+  }
+  to {
+    filter: hue-rotate(50deg);
+  }
+}

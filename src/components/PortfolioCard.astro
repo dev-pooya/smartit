@@ -15,7 +15,7 @@ const { portfolio, imageSrc } = Astro.props;
   >
     <h1 class="font-medium text-lg">{portfolio.title}</h1>
     <div class="flex justify-between">
-      <a href={portfolio.domain}>{portfolio.domain.slice(8)}</a>
+      <a href={portfolio.domain} rel="nofollow">{portfolio.domain.slice(8)}</a>
       <ul class="flex gap-3 justify-end">
         {
           portfolio.techStack.map((tech) => (

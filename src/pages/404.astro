@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import notFoundImage from "../images/page-not-found.svg";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout title="صفحه یافت نشد">
+  <section class="max-w-screen-xl mx-auto px-5 pt-[16vh] grid justify-center">
+    <Image src={notFoundImage} alt="not found" />
+    <h2 class="pt-20 font-semibold text-4xl text-center">
+      صفحه مورد نظر پیدا نشد
+    </h2>
+    <Button className="mt-5">
+      <a href="/" class="w-full">بازگشت به صفحه اصلی </a>
+    </Button>
+  </section>
+</Layout>
