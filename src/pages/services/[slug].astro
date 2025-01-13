@@ -2,6 +2,7 @@
 import Accordion from "@/components/Accordion.astro";
 import Header from "@/components/Header.astro";
 import MobileHeader from "@/components/MobileHeader.astro";
+import OrderDrawerTrigger from "@/components/OrderDrawerTrigger";
 import SectionTitle from "@/components/SectionTitle.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -90,12 +91,13 @@ const {
                     </li>
                   ))}
                 </ul>
-                <Button
+
+                <OrderDrawerTrigger
+                  label="سفارش"
                   className="w-full mt-auto"
+                  client:load
                   variant={index !== 1 ? "secondary" : "default"}
-                >
-                  سفارش
-                </Button>
+                />
               </Card>
             ))
           }

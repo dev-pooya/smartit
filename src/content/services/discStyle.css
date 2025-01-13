@@ -40,6 +40,13 @@
   .disc-list li:nth-child(n + 3) {
     margin-top: 40px !important;
   }
+  .disc-list li {
+    width: 7.7rem;
+    height: 7.7rem;
+  }
+  .disc-list li span {
+    font-size: 0.85rem;
+  }
 }
 
 .disc-list span {

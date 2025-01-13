@@ -1,6 +1,6 @@
 ---
 title: "عطاری دکتر سلامت"
-domain: "https://arefgold.com"
+domain: "https://drsalamatasraa.ir"
 image: "/images/portfolios/attari.webp"
 techStack:
   - "mdi:laravel"
