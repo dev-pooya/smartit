@@ -7,6 +7,7 @@ const servicesCollection = defineCollection({
     keywords: z.string().optional(),
     subtitle: z.string().optional(),
     effectiveTitle: z.string().optional(),
+    pricingPlansMode: z.enum(["start", "monthly"]),
     pricingPlans: z
       .array(
         z.object({

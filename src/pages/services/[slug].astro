@@ -36,6 +36,7 @@ const {
   title,
   description,
   keywords,
+  pricingPlansMode,
   pricingPlans,
   faqs,
   subtitle,
@@ -68,6 +69,7 @@ const {
           با دریافت مشاوره از کارشناسان حرفه‌ای ما، طرح مناسب کسب و کارتان را
           انتخاب کنید
         </p>
+
         <div class="grid md:grid-cols-3 gap-10 pt-10">
           {
             pricingPlans.map((plan, index) => (
@@ -79,7 +81,9 @@ const {
                     <span class="font-semibold text-4xl dark:text-sky-400 text-primary-600">
                       {plan.price}
                     </span>
-                    <span class="text-xl">/شروع قیمت</span>
+                    <span class="text-xl">
+                      {pricingPlansMode === "start" ? "/شروع قیمت" : "/ماهانه "}
+                    </span>
                     <br />
                   </div>
                 </div>
