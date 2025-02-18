@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: 🚀 Deploy to FTP
-        uses: appleboy/ftp-action@v0.2.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
