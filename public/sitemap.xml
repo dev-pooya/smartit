@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartitgroups.com/</loc>
+    <loc>https://smartitgroups.com</loc>
     <lastmod>2024-12-17</lastmod>
     <priority>1.0</priority>
   </url>
   <!-- Sub-pages for services -->
   <url>
     <loc>https://smartitgroups.com/services/web-design-company/</loc>
-    <lastmod>2025-01/15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
   </url>
-   <url>
+  <url>
     <loc>https://smartitgroups.com/services/seo/</loc>
     <lastmod>2024-12-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smartitgroups.com/services/web-design-ecommerce/</loc>
-    <lastmod>2025-01/15</lastmod>
+    <lastmod>2024-12-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://smartitgroups.com/services/web-design-laravel/</loc>
-    <lastmod>2025-01/15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://smartitgroups.com/services/instagram/</loc>
-    <lastmod>2025-01/15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://smartitgroups.com/services/ui/</loc>
-    <lastmod>2025-01/15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
   </url>
   
   <!-- portfolio pages -->
   <url>
-    <loc>https://smartitgroups.com/portfolios</loc>
-    <lastmod>2025-01/15</lastmod>
+    <loc>https://smartitgroups.com/portfolios/</loc>
+    <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://smartitgroups.com/blog</loc>
+    <loc>https://smartitgroups.com/blog/</loc>
     <lastmod>2024-12-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smartitgroups.com/contact</loc>
+    <loc>https://smartitgroups.com/contact/</loc>
     <lastmod>2024-12-17</lastmod>
     <priority>0.7</priority>
   </url>
