@@ -121,6 +121,34 @@ const { title, keywords, description, prefetch } = Astro.props;
       }
       // init
       initAccordion();
+
+      // format time
+      function formatTime(timestamp) {
+        const now = new Date();
+        const date = new Date(timestamp);
+        const diffInSeconds = Math.floor((now - date) / 1000);
+
+        if (diffInSeconds < 60) return "همین الان";
+        if (diffInSeconds < 3600)
+          return `${Math.floor(diffInSeconds / 60)} دقیقه پیش`;
+        if (diffInSeconds < 86400)
+          return `${Math.floor(diffInSeconds / 3600)} ساعت پیش`;
+        if (diffInSeconds < 604800)
+          return `${Math.floor(diffInSeconds / 86400)} روز پیش`;
+        if (diffInSeconds < 2592000)
+          return `${Math.floor(diffInSeconds / 604800)} هفته پیش`;
+        if (diffInSeconds < 31536000)
+          return `${Math.floor(diffInSeconds / 2592000)} ماه پیش`;
+        return "خیلی وقت پیش";
+      }
+
+      const timeTags = document.querySelectorAll("[data-element=comment-date]");
+      if (timeTags.length) {
+        timeTags.forEach((tag) => {
+          const date = tag.getAttribute("datetime");
+          tag.textContent = formatTime(date);
+        });
+      }
     });
   </script>
 </html>

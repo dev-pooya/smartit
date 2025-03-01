@@ -19,8 +19,7 @@ import {
 } from "./ui/select";
 import { servicesCard } from "@/content/services/servicesCard";
 import { Label } from "./ui/label";
-
-const API_BASE_URL = "https://api.smartitgroups.com";
+import { API_BASE_URL } from "@/lib/utils";
 
 function OrderDrawer() {
   const [isOpen, setIsOpen] = useState(false);

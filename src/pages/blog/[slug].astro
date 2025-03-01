@@ -6,6 +6,9 @@ import Layout from "@/layouts/Layout.astro";
 import BannerSection from "@/sections/BannerSection.astro";
 import Footer from "@/sections/Footer.astro";
 import { getCollection, getEntry } from "astro:content";
+import { CommentForm } from "@/components/CommentForm";
+import { getComments } from "@/lib/utils";
+import Comments from "@/components/Comments.astro";
 
 // Fetch the paths for all services
 export async function getStaticPaths() {
@@ -28,8 +31,10 @@ if (!blog) {
 // Render the Markdown content and headings
 const { Content } = await blog.render();
 
-const { title, thumbnail, tags, headings, keywords, description, alt } =
+const { id, title, thumbnail, tags, headings, keywords, description, alt } =
   blog.data;
+
+const commentsData = await getComments(id);
 ---
 
 <Layout
@@ -51,7 +56,7 @@ const { title, thumbnail, tags, headings, keywords, description, alt } =
       >
         {title}
       </h1>
-      <article class="col-span-3 border-r-4 pr-3">
+      <article class="col-span-3 md:border-r-4 md:pr-3">
         <Content />
       </article>
       <aside class="hidden md:block">
@@ -85,8 +90,52 @@ const { title, thumbnail, tags, headings, keywords, description, alt } =
           </ul>
         </Card>
       </aside>
+      <div class="pt-3 mt-3 col-span-3">
+        <h2 class="text-3xl md:text-4xl py-4 font-semibold">نظرات کاربران</h2>
+        <CommentForm blogId={id} client:load />
+        <Comments comments={commentsData} />
+      </div>
     </div>
   </main>
   <BannerSection />
   <Footer />
+
+  <script>
+    const likeBtns = document.querySelectorAll("[data-element=like-btn]");
+    const dislikeBtns = document.querySelectorAll("[data-element=dislike-btn]");
+    likeBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        // get the id
+        const id = e.currentTarget.getAttribute("data-id");
+
+        // edit the content
+        e.currentTarget.querySelector("span").textContent++;
+
+        // send request to server to like the element
+        const res = fetch(`http://127.0.0.1:8000/api/comments/${id}/like`, {
+          method: "post",
+        });
+        e.currentTarget.setAttribute("disabled", true);
+      });
+    });
+    dislikeBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        // get the id
+        const id = e.currentTarget.getAttribute("data-id");
+
+        // edit the content
+        e.currentTarget.querySelector("span").textContent++;
+
+        // send request to server to like the element
+        // TODO change the api address
+        const res = fetch(
+          `https://api.smartitgroups.com/api/comments/${id}/dislike`,
+          {
+            method: "post",
+          }
+        );
+        e.currentTarget.setAttribute("disabled", true);
+      });
+    });
+  </script>
 </Layout>
