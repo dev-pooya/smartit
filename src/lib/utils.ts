@@ -4,8 +4,8 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(...inputs));
 }
-// export const API_BASE_URL = "https://api.smartitgroups.com";
-export const API_BASE_URL = "http://127.0.0.1:8000";
+export const API_BASE_URL = "https://api.smartitgroups.com";
+// export const API_BASE_URL = "http://127.0.0.1:8000";
 
 export async function getComments(blogId) {
   const res = await fetch(`${API_BASE_URL}/api/comments/?post_id=${blogId}`, {
