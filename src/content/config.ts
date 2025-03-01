@@ -39,6 +39,7 @@ const portfoliosCollection = defineCollection({
 
 const blogCollection = defineCollection({
   schema: z.object({
+    id: z.string(),
     title: z.string(),
     thumbnail: z.string(),
     alt: z.string(),
