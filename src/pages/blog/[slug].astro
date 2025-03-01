@@ -128,9 +128,12 @@ const commentsData = await getComments(id);
 
         // send request to server to like the element
         // TODO change the api address
-        const res = fetch(`https://api.smartitgroups.com/api/comments/${id}/dislike`, {
-          method: "post",
-        });
+        const res = fetch(
+          `https://api.smartitgroups.com/api/comments/${id}/dislike`,
+          {
+            method: "post",
+          }
+        );
         e.currentTarget.setAttribute("disabled", true);
       });
     });
