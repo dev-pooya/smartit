@@ -2,14 +2,16 @@
 import "aos/dist/aos.css";
 import "../styles/globals.css";
 import OrderDrawer from "@/components/OrderDrawer";
+import { Schema } from "astro-seo-schema";
 interface Props {
   title: string;
   keywords?: string;
   description?: string;
   prefetch?: string;
+  seoSchemas?: any[];
 }
 
-const { title, keywords, description, prefetch } = Astro.props;
+const { title, keywords, description, prefetch, seoSchemas } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,45 +26,12 @@ const { title, keywords, description, prefetch } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     {prefetch && <link rel="prefetch" href={prefetch} />}
     <title>{title}</title>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "smart it",
-        "image": "https://smartitgroups.com/_astro/siteLogo.C9KRK0rX_2r9uSt.svg",
-        "@id": "https://smartitgroups.com",
-        "url": "https://smartitgroups.com",
-        "telephone": "09146749242",
-        "priceRange": "10M-150M",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "",
-          "addressLocality": "maku",
-          "postalCode": "",
-          "addressCountry": "IR"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "09:00",
-          "closes": "08:30"
-        },
-        "sameAs": ""
-      }
-    </script>
+    {seoSchemas?.map((seoSchema) => <Schema item={seoSchema} />)}
   </head>
   <body class="bg-background overflow-x-hidden">
     <slot />
     <OrderDrawer client:load />
-  </body>
-  <script>
+  </body><script>
     import AOS from "aos";
     window.addEventListener("load", function () {
       AOS.init();
