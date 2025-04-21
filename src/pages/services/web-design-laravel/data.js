@@ -123,9 +123,9 @@ export const data = {
       priceRange: "10M-150M",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "",
+        streetAddress: "Javad Ghanbari",
         addressLocality: "maku",
-        postalCode: "",
+        postalCode: "5861995740",
         addressCountry: "IR",
       },
       openingHoursSpecification: {
@@ -236,7 +236,7 @@ export const data = {
       description:
         "در این ویدیو خدمات طراحی و توسعه اپلیکیشن با لاراول توسط تیم Smart I.T معرفی می‌شود. از طراحی فروشگاه اینترنتی تا ساخت API و پنل‌های مدیریتی پیشرفته.",
       thumbnailUrl: "https://example.com/path-to-your-thumbnail.jpg",
-      uploadDate: "2025-04-04",
+      uploadDate: "2025-04-21T14:00:00+03:30",
       duration: "PT2M",
       publisher: {
         "@type": "Organization",
