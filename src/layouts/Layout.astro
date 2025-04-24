@@ -21,9 +21,24 @@ const { title, keywords, description, prefetch, seoSchemas } = Astro.props;
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width" />
+    <meta property="og:site_name" content="آژانس دیجیتال مارکتینگ هوش آی تی" />
     <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
     <link rel="stylesheet" href="/fonts/font.css" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGXPZJ3GK0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GGXPZJ3GK0");
+    </script>
+
     {prefetch && <link rel="prefetch" href={prefetch} />}
     <title>{title}</title>
     {seoSchemas?.map((seoSchema) => <Schema item={seoSchema} />)}
